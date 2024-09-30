@@ -2,7 +2,9 @@ from fastapi import FastAPI
 from Databases.database import engine
 from Databases import models
 from starlette.middleware.cors import CORSMiddleware
-from Routes.Admin import admin
+from Routes.UsersAuthentication.Admin import admin
+from Loggers.log import err_log, app_log
+from Routes.StudentManagement import manageStudent
 
 
 app = FastAPI()
@@ -10,8 +12,10 @@ app = FastAPI()
 # Create the database tables
 try:
     models.Base.metadata.create_all(bind=engine)
-except:
-    pass
+    app_log.info("Database tables create successfully")
+except Exception as e:
+    err_log.error(f"Database tables create fail {e}")
+
 
 origins = ["http://localhost", "http://localhost:8000"]
 app.add_middleware(
@@ -24,3 +28,4 @@ app.add_middleware(
 
 
 app.include_router(admin.router, prefix="/api/v1/admin")
+app.include_router(manageStudent.router, prefix="/api/v1/manageStudent")

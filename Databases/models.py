@@ -1,5 +1,5 @@
 from Databases.database import Base
-from sqlalchemy import Column, Integer, String, Boolean, Date, ForeignKey, JSON, DateTime, Time
+from sqlalchemy import Column, Integer, String, Boolean, Date, ForeignKey, JSON, DateTime, Time, Text
 import uuid
 from Function.function import get_sl_DateTime
 from nanoid import generate
@@ -11,6 +11,21 @@ class Admin(Base):
     admin_name = Column(String(20), nullable=False, unique=True, index=True)
     password = Column(String(100), nullable=False)
     email = Column(String(40), unique=True, nullable=False, index=True)
+
+class ProfileImagesStudent(Base):
+    __tablename__ = "profile_images"
+
+    profile_image_id = Column(Integer, nullable=False, index=True, primary_key=True, autoincrement=True)
+    student_id = Column(String(15), ForeignKey("student.student_id", ondelete="CASCADE"), index=True)
+    profile_image_url = Column(Text, nullable=False)
+
+class CertificateImagesStudent(Base):
+    __tablename__ = "certificate_images_student"
+
+    certificate_image_id = Column(Integer, nullable=False, index=True, primary_key=True, autoincrement=True)
+    student_id = Column(String(15), ForeignKey("student.student_id", ondelete="CASCADE"), index=True)
+    certificate_image_url = Column(Text, nullable=False)
+
 
 class EducationLevel(Base):
     __tablename__ = "education_level"
@@ -36,7 +51,7 @@ class Branch(Base):
     close_time = Column(Time, nullable=False)
     hall = Column(JSON)
     active = Column(Boolean, nullable=False, default=True)
-    branch_manager_id = Column(String(10), ForeignKey("branch_manager.manager_id"))
+    branch_manager_id = Column(String(10)) # , ForeignKey("branch_manager.manager_id")
     created = Column(DateTime, nullable=False, default= lambda : get_sl_DateTime())
 
 
@@ -55,7 +70,7 @@ class Student(Base):
     school = Column(String(50))
     mobile = Column(Integer, unique=True, index=True)
     education_level_id = Column(String(36), ForeignKey("education_level.education_level_id"), index=True)
-    branch_id = Column(String(8), ForeignKey("branch.branch_id"))
+    branch_id = Column(String(8)) # , ForeignKey("branch.branch_id")
     created = Column(DateTime, nullable=False, index=True, default= lambda : get_sl_DateTime())
     active = Column(Boolean, nullable=False, default=True)
 
@@ -63,7 +78,7 @@ class StudentParents(Base):
     __tablename__ = "student_parents"
 
     row_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
-    student_id = Column(String(15), ForeignKey("student.student_it"), index=True)
+    student_id = Column(String(15), ForeignKey("student.student_id", ondelete="CASCADE"), index=True)
     father_name = Column(String(25))
     father_mobile = Column(Integer, unique=True)
     father_email = Column(String(40), unique=True)
@@ -77,11 +92,11 @@ class StudentParents(Base):
     info_send = Column(Boolean) # father -> true | mother -> false
 
 
-class Siblings(Base):
+class StudentSiblings(Base):
     __tablename__ = "student_siblings"
 
     row_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
-    student_id = Column(String(15), ForeignKey("student.student_id"), index=True)
+    student_id = Column(String(15), ForeignKey("student.student_id", ondelete="CASCADE"), index=True)
     name = Column(String(40), nullable=False)
     DOB = Column(Date)
     gender = Column(Boolean, nullable=False)  # male -> true | female -> false

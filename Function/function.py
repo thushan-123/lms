@@ -1,5 +1,5 @@
 import hashlib
-from Databases.database import Session
+from Databases.database import SessionLocal
 import random
 import string
 from datetime import datetime
@@ -19,7 +19,7 @@ def password_hash(password: str) -> str:
 
 
 def get_db():
-    db = Session()
+    db = SessionLocal()
     try:
         yield db
     finally:

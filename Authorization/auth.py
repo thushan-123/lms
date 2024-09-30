@@ -2,7 +2,7 @@ import os
 import jwt
 from dotenv import load_dotenv
 from typing import Literal
-
+from fastapi import HTTPException
 from jose import JWTError
 
 from Loggers.log import err_log
@@ -50,7 +50,7 @@ def decode_token(key: str, token: str) -> str:
     except Exception as e:
         err_log.error(f"decode_token auth {e}")
 
-async def decode_verify_token(token: str, role: _ROLE):
+async def decode_verify_token_with_role(token: str, role: _ROLE):
     try:
         if role == 'admin':
             return decode_token(ADMIN_SECRET_KEY, token)
@@ -64,5 +64,36 @@ async def decode_verify_token(token: str, role: _ROLE):
             return decode_token(STUDENT_SECRET_KEY, token)
     except JWTError as e:
         err_log.error(f"JWT decode error {e}")
+
+async def decode_token_without_role(token: str):
+    try:
+        # Attempt to decode the token using all possible secret keys
+        for secret_key in [ADMIN_SECRET_KEY, MANAGER_SECRET_KEY, ACADEMIC_SECRET_KEY, TEACHER_SECRET_KEY, STUDENT_SECRET_KEY]:
+            try:
+                payload = jwt.decode(token, secret_key, algorithms=['HS256'])
+                return payload
+            except jwt.InvalidTokenError:
+                continue  # Try the next secret key
+
+        # If none of the secret keys worked, the token is invalid
+        return None
+
+    except jwt.ExpiredSignatureError:
+        err_log.error("Token has expired")
+        return None
+    except jwt.InvalidTokenError:
+        err_log.error("Invalid token")
+        return None
+
+async def decode_token_access_role(token: str, access_list: list):
+    payload = await decode_token_without_role(token)
+    if payload is not None:
+        if payload['role'] in access_list:
+            return payload
+        else:
+            return None
+    else:
+        return None
+
 
 

@@ -10,7 +10,7 @@ load_dotenv()
 MARIADB_URL = os.getenv("MARIADB_URL")
 
 engine = create_engine(MARIADB_URL)
-Session = sessionmaker(autoflush=False, autocommit=False, bind=engine)
+SessionLocal = sessionmaker(autoflush=False, autocommit=False, bind=engine)
 
 Base = declarative_base()
 
