@@ -2,10 +2,13 @@ import os
 import jwt
 from dotenv import load_dotenv
 from typing import Literal
-from fastapi import HTTPException
+from fastapi import HTTPException, Depends, status
+from fastapi.security import HTTPBearer
 from jose import JWTError
+from starlette.responses import JSONResponse
 
 from Loggers.log import err_log
+
 
 load_dotenv()
 
@@ -16,6 +19,8 @@ TEACHER_SECRET_KEY = os.getenv("TEACHER_SECRET_KEY")
 STUDENT_SECRET_KEY = os.getenv("STUDENT_SECRET_KEY")
 
 ALGORITHM = os.getenv("ALGORITHM")
+
+oauth2_scheme = HTTPBearer(bearerFormat="JWT")
 
 def generate_access_token(key: str, data_set: dict) -> str:
     try:
@@ -80,10 +85,10 @@ async def decode_token_without_role(token: str):
 
     except jwt.ExpiredSignatureError:
         err_log.error("Token has expired")
-        return None
+        return HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail={"detail": "unauthorized access"})
     except jwt.InvalidTokenError:
         err_log.error("Invalid token")
-        return None
+        return HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail={"detail": "unauthorized access"})
 
 async def decode_token_access_role(token: str, access_list: list):
     payload = await decode_token_without_role(token)

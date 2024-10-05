@@ -3,7 +3,7 @@ from typing import Optional
 from nanoid import generate
 from pydantic import BaseModel, EmailStr, Json, constr, conint, field_validator, Field, validator
 
-class Student(BaseModel):
+class StudentSchema(BaseModel):
     student_id: str = Field(default_factory= lambda : generate(size=15)) # auto gen student id
     firstname: constr(max_length=15, to_lower=True)
     lastname: constr(max_length=15, to_lower=True)
@@ -19,7 +19,7 @@ class Student(BaseModel):
     branch_id: constr(max_length=8, to_lower=True)
 
 
-class StudentParents(BaseModel):
+class StudentParentsSchema(BaseModel):
     father_name: Optional[constr(max_length=25, to_lower=True)] = None
     father_mobile: Optional[int] = None
     father_email: Optional[EmailStr] = None
@@ -32,24 +32,24 @@ class StudentParents(BaseModel):
     mother_address: Optional[Json] = None
     info_send: Optional[bool] = None
 
-class ProfileImageStudent(BaseModel):
+class ProfileImageStudentSchema(BaseModel):
     profile_image_url: Optional[str] = None
 
-class CertificateImagesStudent(BaseModel):
+class CertificateImagesStudentSchema(BaseModel):
     certificate_image_url: Optional[str] = None
 
-class StudentSiblings(BaseModel):
+class StudentSiblingsSchema(BaseModel):
     name: constr(max_length=40)
     DOB: Optional[date] = None
     gender: bool
     mobile: Optional[int] = None
 
 class AddStudent(BaseModel):
-    student: list[Student]
+    student: list[StudentSchema]
     profile_image_url: Optional[list] = None
     certificate_image_url: Optional[list] = None
-    student_parents: list[StudentParents]
-    siblings: list[StudentSiblings]
+    student_parents: list[StudentParentsSchema]
+    siblings: list[StudentSiblingsSchema]
 
     @classmethod
     @field_validator('student')
@@ -77,3 +77,8 @@ class DeactivateStudent(BaseModel):
 
 class DeleteStudent(BaseModel):
     student_id: list
+
+class SearchStudentSchema(BaseModel):
+    branch_name: Optional[str] = None
+    student_id: Optional[str] = None
+    student_name: Optional[str] = None

@@ -4,16 +4,16 @@ from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 from Function.function import db_dependency
 from Loggers.log import err_log, app_log
-from Authorization.auth import create_access_token
+from Authorization.auth import create_access_token, oauth2_scheme
 from Schemas.Admin.adminSchema import CreateAdmin, LoginAdmin
 from .adminFunction import insert_new_admin_data, get_admin_data, admin_verify
 
 
 router = APIRouter()
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
 
 @router.post("/createAdmin")
-async def create_admin(request: CreateAdmin, db: db_dependency):
+async def create_admin(request: CreateAdmin, db: db_dependency, token: str = Depends(oauth2_scheme)):
     try:
         response = await insert_new_admin_data(db, request.admin_name, request.password, request.email)
         if response:

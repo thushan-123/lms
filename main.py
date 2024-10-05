@@ -27,5 +27,5 @@ app.add_middleware(
 )
 
 
-app.include_router(admin.router, prefix="/api/v1/admin")
+app.include_router(admin.router, prefix="/api/v1/auth/admin")
 app.include_router(manageStudent.router, prefix="/api/v1/manageStudent")

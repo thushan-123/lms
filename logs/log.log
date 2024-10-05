@@ -152,3 +152,149 @@
 2024-09-29 21:33:56,606 - INFO - manageStudentFunction - insert_education_level | data insert successfully
 2024-09-29 21:33:56,662 - INFO - manageStudentFunction - insert_student_all_data | data insert successfully
 2024-09-29 21:34:30,802 - INFO - manageStudentFunction - delete_students_cascade | successfully deleted
+2024-09-30 08:37:18,237 - INFO - Database tables create successfully
+2024-09-30 08:39:38,054 - INFO - manageStudentFunction - insert_student_all_data | data insert successfully
+2024-09-30 08:40:11,332 - INFO - manageStudentFunction - insert_get_educational_level | data retrieve successfully
+2024-09-30 08:40:11,332 - INFO - manageStudent - get_education_level | send payload to user
+2024-09-30 08:40:22,912 - INFO - manageStudentFunction - deactivate_students_field | successfully update active field
+2024-09-30 08:41:01,222 - INFO - manageStudentFunction - deactivate_students_field | successfully update active field
+2024-09-30 08:41:57,751 - INFO - manageStudentFunction - delete_students_cascade | successfully deleted
+2024-09-30 08:42:23,503 - INFO - manageStudentFunction - insert_student_all_data | data insert successfully
+2024-09-30 13:07:25,923 - INFO - Database tables create successfully
+2024-09-30 13:08:05,085 - INFO - Database tables create successfully
+2024-09-30 13:09:25,638 - INFO - Database tables create successfully
+2024-09-30 13:11:12,576 - INFO - Database tables create successfully
+2024-09-30 13:12:29,499 - INFO - Database tables create successfully
+2024-09-30 13:13:55,446 - INFO - Database tables create successfully
+2024-09-30 13:15:12,698 - INFO - Database tables create successfully
+2024-09-30 13:15:58,656 - INFO - Database tables create successfully
+2024-09-30 13:16:40,249 - INFO - Database tables create successfully
+2024-09-30 13:17:15,366 - INFO - Database tables create successfully
+2024-09-30 13:19:07,535 - INFO - Database tables create successfully
+2024-09-30 13:20:19,189 - INFO - Database tables create successfully
+2024-09-30 13:21:53,895 - INFO - Database tables create successfully
+2024-09-30 13:27:58,614 - INFO - Database tables create successfully
+2024-09-30 13:31:01,112 - INFO - Database tables create successfully
+2024-09-30 13:36:21,023 - INFO - Database tables create successfully
+2024-09-30 13:41:41,966 - INFO - Database tables create successfully
+2024-09-30 13:42:45,129 - INFO - Database tables create successfully
+2024-09-30 13:42:47,828 - INFO - manageStudentFunction - insert_education_level | data insert successfully
+2024-09-30 13:42:47,878 - INFO - manageStudentFunction - insert_student_all_data | data insert successfully
+2024-09-30 13:48:30,706 - INFO - manageStudentFunction - insert_student_all_data | data insert successfully
+2024-09-30 13:56:09,140 - INFO - Database tables create successfully
+2024-10-03 15:42:49,116 - INFO - Database tables create successfully
+2024-10-03 15:45:20,323 - INFO - manageStudentFunction - insert_get_educational_level | data retrieve successfully
+2024-10-03 15:45:20,324 - INFO - manageStudent - get_education_level | send payload to user
+2024-10-03 15:46:23,751 - INFO - Database tables create successfully
+2024-10-03 15:51:05,287 - INFO - Database tables create successfully
+2024-10-03 15:59:30,177 - INFO - Database tables create successfully
+2024-10-03 15:59:38,716 - INFO - manageStudentFunction - insert_get_educational_level | data retrieve successfully
+2024-10-03 15:59:38,716 - INFO - manageStudent - get_education_level | send payload to user
+2024-10-03 20:57:36,952 - INFO - Database tables create successfully
+2024-10-03 21:11:34,111 - INFO - Database tables create successfully
+2024-10-03 21:13:06,641 - INFO - Database tables create successfully
+2024-10-03 21:13:19,933 - INFO - manageStudentFunction - insert_student_all_data | data insert successfully
+2024-10-03 21:16:14,286 - INFO - Database tables create successfully
+2024-10-03 21:16:44,498 - INFO - Database tables create successfully
+2024-10-03 21:16:52,446 - INFO - manageStudentFunction - insert_student_all_data | data insert successfully
+2024-10-03 21:19:42,308 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:21:28,781 - INFO - Database tables create successfully
+2024-10-03 21:27:39,741 - INFO - Database tables create successfully
+2024-10-03 21:35:12,926 - INFO - Database tables create successfully
+2024-10-03 21:35:16,910 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:44:05,890 - INFO - Database tables create successfully
+2024-10-03 21:44:23,359 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:46:33,487 - INFO - Database tables create successfully
+2024-10-03 21:46:37,899 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:47:26,727 - INFO - Database tables create successfully
+2024-10-03 21:47:29,694 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:48:06,383 - INFO - Database tables create successfully
+2024-10-03 21:48:49,843 - INFO - Database tables create successfully
+2024-10-03 21:51:35,207 - INFO - Database tables create successfully
+2024-10-03 21:51:37,357 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:52:15,297 - INFO - Database tables create successfully
+2024-10-03 21:52:21,053 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:53:28,721 - INFO - Database tables create successfully
+2024-10-03 21:53:35,509 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:55:47,972 - INFO - Database tables create successfully
+2024-10-03 21:55:50,029 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:57:38,950 - INFO - Database tables create successfully
+2024-10-03 21:57:56,473 - INFO - Database tables create successfully
+2024-10-03 21:57:59,365 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 21:59:15,801 - INFO - Database tables create successfully
+2024-10-03 21:59:18,295 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 22:00:47,732 - INFO - Database tables create successfully
+2024-10-03 22:00:50,618 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 22:01:50,075 - INFO - Database tables create successfully
+2024-10-03 22:01:52,908 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-03 22:03:01,389 - INFO - Database tables create successfully
+2024-10-03 22:05:00,391 - INFO - Database tables create successfully
+2024-10-03 22:05:02,772 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-04 08:26:09,439 - INFO - Database tables create successfully
+2024-10-04 08:37:59,064 - INFO - Database tables create successfully
+2024-10-04 08:45:23,869 - INFO - Database tables create successfully
+2024-10-04 08:49:56,275 - INFO - Database tables create successfully
+2024-10-04 08:51:40,961 - INFO - Database tables create successfully
+2024-10-04 08:53:33,242 - INFO - Database tables create successfully
+2024-10-04 17:30:41,251 - INFO - Database tables create successfully
+2024-10-04 17:31:52,968 - INFO - Database tables create successfully
+2024-10-04 17:35:51,555 - INFO - Database tables create successfully
+2024-10-04 17:39:53,773 - INFO - Database tables create successfully
+2024-10-04 17:40:09,101 - INFO - Database tables create successfully
+2024-10-04 17:43:04,971 - INFO - Database tables create successfully
+2024-10-04 17:43:21,241 - INFO - Database tables create successfully
+2024-10-04 17:43:48,855 - INFO - Database tables create successfully
+2024-10-04 17:44:21,351 - INFO - Database tables create successfully
+2024-10-04 17:46:35,928 - INFO - Database tables create successfully
+2024-10-04 17:48:28,515 - INFO - Database tables create successfully
+2024-10-04 17:49:04,097 - INFO - Database tables create successfully
+2024-10-04 17:49:35,955 - INFO - Database tables create successfully
+2024-10-04 17:52:48,298 - INFO - Database tables create successfully
+2024-10-04 17:55:48,035 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-04 17:55:48,079 - INFO - managementStudent - getStudentDetailsStudent | send data student_id OG8ylGU_Bn_PSic
+2024-10-04 20:00:22,936 - INFO - Database tables create successfully
+2024-10-04 20:04:58,356 - INFO - Database tables create successfully
+2024-10-04 20:13:18,080 - INFO - Database tables create successfully
+2024-10-04 20:13:21,280 - INFO - Database tables create successfully
+2024-10-04 20:21:53,080 - INFO - Database tables create successfully
+2024-10-04 20:24:07,054 - INFO - Database tables create successfully
+2024-10-04 20:26:13,391 - INFO - Database tables create successfully
+2024-10-04 20:29:14,741 - INFO - Database tables create successfully
+2024-10-04 20:31:50,784 - INFO - Database tables create successfully
+2024-10-04 20:32:55,154 - INFO - Database tables create successfully
+2024-10-04 20:35:20,025 - INFO - Database tables create successfully
+2024-10-04 20:36:19,490 - INFO - Database tables create successfully
+2024-10-04 20:38:25,596 - INFO - Database tables create successfully
+2024-10-04 20:39:07,715 - INFO - Database tables create successfully
+2024-10-04 20:39:16,699 - INFO - Database tables create successfully
+2024-10-04 20:41:03,384 - INFO - Database tables create successfully
+2024-10-04 20:43:23,327 - INFO - Database tables create successfully
+2024-10-04 20:44:49,086 - INFO - Database tables create successfully
+2024-10-04 20:45:20,282 - INFO - Database tables create successfully
+2024-10-04 20:46:13,243 - INFO - Database tables create successfully
+2024-10-04 20:48:17,012 - INFO - Database tables create successfully
+2024-10-04 20:51:52,674 - INFO - Database tables create successfully
+2024-10-04 20:52:03,137 - INFO - Database tables create successfully
+2024-10-04 20:54:31,809 - INFO - Database tables create successfully
+2024-10-04 20:55:16,460 - INFO - Database tables create successfully
+2024-10-04 20:56:39,327 - INFO - Database tables create successfully
+2024-10-04 20:58:28,063 - INFO - Database tables create successfully
+2024-10-04 20:59:57,723 - INFO - Database tables create successfully
+2024-10-04 21:00:17,054 - INFO - Database tables create successfully
+2024-10-04 21:00:33,816 - INFO - Database tables create successfully
+2024-10-04 21:02:08,690 - INFO - Database tables create successfully
+2024-10-04 21:03:18,536 - INFO - Database tables create successfully
+2024-10-04 21:03:36,447 - INFO - Database tables create successfully
+2024-10-04 21:05:51,099 - INFO - Database tables create successfully
+2024-10-04 21:06:10,869 - INFO - Database tables create successfully
+2024-10-04 21:06:21,428 - INFO - Database tables create successfully
+2024-10-04 21:07:24,111 - INFO - Database tables create successfully
+2024-10-04 21:07:42,022 - INFO - Database tables create successfully
+2024-10-04 21:09:24,290 - INFO - Database tables create successfully
+2024-10-04 21:11:29,636 - INFO - Database tables create successfully
+2024-10-04 21:11:52,785 - INFO - Database tables create successfully
+2024-10-04 21:13:11,954 - INFO - Database tables create successfully
+2024-10-04 21:13:16,903 - INFO - manageStudentFunction - insert_get_educational_level | data retrieve successfully
+2024-10-04 21:13:16,904 - INFO - manageStudent - get_education_level | send payload to user
+2024-10-04 21:14:45,734 - INFO - Database tables create successfully
+2024-10-04 21:15:06,701 - INFO - Database tables create successfully

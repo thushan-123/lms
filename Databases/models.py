@@ -3,6 +3,8 @@ from sqlalchemy import Column, Integer, String, Boolean, Date, ForeignKey, JSON,
 import uuid
 from Function.function import get_sl_DateTime
 from nanoid import generate
+from sqlalchemy.orm import relationship
+
 
 class Admin(Base):
     __tablename__ = "admin"
@@ -11,20 +13,6 @@ class Admin(Base):
     admin_name = Column(String(20), nullable=False, unique=True, index=True)
     password = Column(String(100), nullable=False)
     email = Column(String(40), unique=True, nullable=False, index=True)
-
-class ProfileImagesStudent(Base):
-    __tablename__ = "profile_images"
-
-    profile_image_id = Column(Integer, nullable=False, index=True, primary_key=True, autoincrement=True)
-    student_id = Column(String(15), ForeignKey("student.student_id", ondelete="CASCADE"), index=True)
-    profile_image_url = Column(Text, nullable=False)
-
-class CertificateImagesStudent(Base):
-    __tablename__ = "certificate_images_student"
-
-    certificate_image_id = Column(Integer, nullable=False, index=True, primary_key=True, autoincrement=True)
-    student_id = Column(String(15), ForeignKey("student.student_id", ondelete="CASCADE"), index=True)
-    certificate_image_url = Column(Text, nullable=False)
 
 
 class EducationLevel(Base):
@@ -50,9 +38,15 @@ class Branch(Base):
     open_time = Column(Time, nullable=False)
     close_time = Column(Time, nullable=False)
     hall = Column(JSON)
+    description = Column(Text)
     active = Column(Boolean, nullable=False, default=True)
     branch_manager_id = Column(String(10)) # , ForeignKey("branch_manager.manager_id")
     created = Column(DateTime, nullable=False, default= lambda : get_sl_DateTime())
+
+
+    # relationship -> Student
+    student = relationship("Student", back_populates="branch", cascade="all, delete-orphan", lazy="joined")
+
 
 
 class Student(Base):
@@ -70,9 +64,22 @@ class Student(Base):
     school = Column(String(50))
     mobile = Column(Integer, unique=True, index=True)
     education_level_id = Column(String(36), ForeignKey("education_level.education_level_id"), index=True)
-    branch_id = Column(String(8)) # , ForeignKey("branch.branch_id")
+    branch_id = Column(String(8), ForeignKey("branch.branch_id"))
     created = Column(DateTime, nullable=False, index=True, default= lambda : get_sl_DateTime())
     active = Column(Boolean, nullable=False, default=True)
+
+    # relationship -> Branch
+    branch = relationship("Branch", lazy="joined")
+
+    # relationship -> StudentParents, StudentSiblings, ProfileImagesStudent, CertificateImageStudent
+    student_parents = relationship("StudentParents", back_populates="student", cascade="all, delete-orphan", lazy='joined')
+    student_siblings = relationship("StudentSiblings", back_populates="student", cascade="all, delete-orphan", lazy="joined")
+    student_profile_image = relationship("ProfileImagesStudent", back_populates="student", cascade="all, delete-orphan", lazy="joined")
+    student_certificate_images = relationship("CertificateImagesStudent", back_populates="student", cascade="all, delete-orphan", lazy="joined")
+
+
+
+    # delete-orphan delete child records if they are removed from parents
 
 class StudentParents(Base):
     __tablename__ = "student_parents"
@@ -91,6 +98,9 @@ class StudentParents(Base):
     mother_address = Column(JSON)
     info_send = Column(Boolean) # father -> true | mother -> false
 
+    # relationships
+    student = relationship("Student", back_populates="student_parents")
+
 
 class StudentSiblings(Base):
     __tablename__ = "student_siblings"
@@ -102,7 +112,26 @@ class StudentSiblings(Base):
     gender = Column(Boolean, nullable=False)  # male -> true | female -> false
     mobile = Column(Integer)
 
+    # relationships
+    student = relationship("Student", back_populates="student_siblings")
+
+class ProfileImagesStudent(Base):
+    __tablename__ = "profile_images"
+
+    profile_image_id = Column(Integer, nullable=False, index=True, primary_key=True, autoincrement=True)
+    student_id = Column(String(15), ForeignKey("student.student_id", ondelete="CASCADE"), index=True)
+    profile_image_url = Column(Text, nullable=False)
+
+    # relationships
+    student = relationship("Student", back_populates="student_profile_image")
 
 
+class CertificateImagesStudent(Base):
+    __tablename__ = "certificate_images_student"
 
+    certificate_image_id = Column(Integer, nullable=False, index=True, primary_key=True, autoincrement=True)
+    student_id = Column(String(15), ForeignKey("student.student_id", ondelete="CASCADE"), index=True)
+    certificate_image_url = Column(Text, nullable=False)
 
+    # relationships
+    student = relationship("Student", back_populates="student_certificate_images")

@@ -37,3 +37,84 @@
 [SQL: DELETE FROM student WHERE student.student_id IN (%(student_id_1_1)s)]
 [parameters: {'student_id_1_1': 'r6OWh9V4Ye18xLB'}]
 (Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-09-30 08:37:25,216 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.IntegrityError) (1062, "Duplicate entry '784514776' for key 'ix_student_mobile'")
+[SQL: INSERT INTO student (student_id, firstname, lastname, email, address, gender, admission_free_is_paid, mother_tung, `NIC`, school, mobile, education_level_id, branch_id, created, active) VALUES (%(student_id)s, %(firstname)s, %(lastname)s, %(email)s, %(address)s, %(gender)s, %(admission_free_is_paid)s, %(mother_tung)s, %(NIC)s, %(school)s, %(mobile)s, %(education_level_id)s, %(branch_id)s, %(created)s, %(active)s)]
+[parameters: {'student_id': 'kTe-w9HtQ_rmFBb', 'firstname': 'thushan', 'lastname': 'madhu', 'email': 'thushanmadhusanka3@gmail.com', 'address': '{"line1": "udugampola", "line2": "udugampola", "city": "gampaha"}', 'gender': 1, 'admission_free_is_paid': 1, 'mother_tung': 'sinhala', 'NIC': '200126302287', 'school': 'senarath paranavithana collage', 'mobile': 784514776, 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'branch_id': 'wd1ef6r3', 'created': datetime.datetime(2024, 9, 30, 8, 37, 25, 215464, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>), 'active': 1}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-09-30 13:34:48,032 - ERROR - manageStudentFunction - insert_educational_level | data insert fail Mapper 'Mapper[Student(student)]' has no property 'student_sibling'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-09-30 13:34:48,033 - ERROR - educational_level_get_error manageStuFunc One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[StudentSiblings(student_siblings)]'. Original exception was: Mapper 'Mapper[Student(student)]' has no property 'student_sibling'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-09-30 13:34:48,033 - ERROR - manageStudentFunction - insert_student_all_data | error One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[StudentSiblings(student_siblings)]'. Original exception was: Mapper 'Mapper[Student(student)]' has no property 'student_sibling'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-09-30 13:36:28,934 - ERROR - manageStudentFunction - insert_educational_level | data insert fail Mapper 'Mapper[Student(student)]' has no property 'student_sibling'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-09-30 13:36:28,934 - ERROR - educational_level_get_error manageStuFunc One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[StudentSiblings(student_siblings)]'. Original exception was: Mapper 'Mapper[Student(student)]' has no property 'student_sibling'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-09-30 13:36:28,934 - ERROR - manageStudentFunction - insert_student_all_data | error One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[StudentSiblings(student_siblings)]'. Original exception was: Mapper 'Mapper[Student(student)]' has no property 'student_sibling'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-09-30 13:41:43,622 - ERROR - manageStudentFunction - insert_educational_level | data insert fail Mapper 'Mapper[Student(student)]' has no property 'student_sibling'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-09-30 13:41:43,623 - ERROR - educational_level_get_error manageStuFunc One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[StudentSiblings(student_siblings)]'. Original exception was: Mapper 'Mapper[Student(student)]' has no property 'student_sibling'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-09-30 13:41:43,623 - ERROR - manageStudentFunction - insert_student_all_data | error One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[StudentSiblings(student_siblings)]'. Original exception was: Mapper 'Mapper[Student(student)]' has no property 'student_sibling'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-09-30 13:48:35,968 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.IntegrityError) (1062, "Duplicate entry '784514776' for key 'ix_student_mobile'")
+[SQL: INSERT INTO student (student_id, firstname, lastname, email, address, gender, admission_free_is_paid, mother_tung, `NIC`, school, mobile, education_level_id, branch_id, created, active) VALUES (%(student_id)s, %(firstname)s, %(lastname)s, %(email)s, %(address)s, %(gender)s, %(admission_free_is_paid)s, %(mother_tung)s, %(NIC)s, %(school)s, %(mobile)s, %(education_level_id)s, %(branch_id)s, %(created)s, %(active)s)]
+[parameters: {'student_id': '8T10jg69rgejDXU', 'firstname': 'thushan', 'lastname': 'madhu', 'email': 'thushanmadhusanka3@gmail.com', 'address': '{"line1": "udugampola", "line2": "udugampola", "city": "gampaha"}', 'gender': 1, 'admission_free_is_paid': 1, 'mother_tung': 'sinhala', 'NIC': '200126302287', 'school': 'senarath paranavithana collage', 'mobile': 784514776, 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'branch_id': 'wd1ef6r3', 'created': datetime.datetime(2024, 9, 30, 13, 48, 35, 958518, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>), 'active': 1}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-09-30 13:49:11,147 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.IntegrityError) (1062, "Duplicate entry 'thushanmadhusanka3@gmail.com' for key 'ix_student_email'")
+[SQL: INSERT INTO student (student_id, firstname, lastname, email, address, gender, admission_free_is_paid, mother_tung, `NIC`, school, mobile, education_level_id, branch_id, created, active) VALUES (%(student_id)s, %(firstname)s, %(lastname)s, %(email)s, %(address)s, %(gender)s, %(admission_free_is_paid)s, %(mother_tung)s, %(NIC)s, %(school)s, %(mobile)s, %(education_level_id)s, %(branch_id)s, %(created)s, %(active)s)]
+[parameters: {'student_id': 'kyAqrGF5LqQ5eOR', 'firstname': 'thushan', 'lastname': 'madhu', 'email': 'thushanmadhusanka3@gmail.com', 'address': '{"line1": "udugampola", "line2": "udugampola", "city": "gampaha"}', 'gender': 1, 'admission_free_is_paid': 1, 'mother_tung': 'sinhala', 'NIC': '200126302287', 'school': 'senarath paranavithana collage', 'mobile': 704514776, 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'branch_id': 'wd1ef6r3', 'created': datetime.datetime(2024, 9, 30, 13, 49, 11, 146998, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>), 'active': 1}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-03 15:46:28,345 - ERROR - manageStudent - get_education_levels | server error: 400: {'unauthorized'}
+2024-10-03 21:19:42,308 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'education_level_name'
+2024-10-03 21:35:16,951 - ERROR - manageStudentFunction - get_student_data | error 1 validation error for StudentSchema
+address
+  JSON input should be string, bytes or bytearray [type=json_type, input_value={'line1': 'udugampola', '...ola', 'city': 'gampaha'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/json_type
+2024-10-03 21:44:23,402 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'father_name'
+2024-10-03 21:46:37,936 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'father_mobile'
+2024-10-03 21:47:29,731 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'father_name'
+2024-10-03 21:48:09,005 - ERROR - manageStudentFunction - get_student_data | error 'list' object has no attribute 'education_level_id'
+2024-10-03 21:51:37,396 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'father_name'
+2024-10-03 21:52:21,091 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'father_name'
+2024-10-03 21:53:35,547 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'father_name'
+2024-10-03 21:55:50,067 - ERROR - manageStudentFunction - get_student_data | error 'InstrumentedList' object has no attribute 'father_name'
+2024-10-03 21:57:42,015 - ERROR - manageStudentFunction - get_student_data | error 'InstrumentedList' object has no attribute 'father_name'
+2024-10-03 21:57:59,403 - ERROR - manageStudentFunction - get_student_data | error 'InstrumentedList' object has no attribute 'father_name'
+2024-10-03 21:59:18,335 - ERROR - manageStudentFunction - get_student_data | error 2 validation errors for StudentParentsSchema
+father_address
+  JSON input should be string, bytes or bytearray [type=json_type, input_value={'street': '123 Main St',...ngfield', 'state': 'IL'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/json_type
+mother_address
+  JSON input should be string, bytes or bytearray [type=json_type, input_value={'street': '123 Main St',...ngfield', 'state': 'IL'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/json_type
+2024-10-03 22:00:50,658 - ERROR - manageStudent - getStudentDetails | error Object of type AddStudent is not JSON serializable
+2024-10-03 22:01:52,944 - ERROR - manageStudentFunction - get_student_data | error Object of type AddStudent is not JSON serializable
+2024-10-04 08:47:04,936 - ERROR - manageStudentFunction - admin_get_students_details | error For many-to-one relationship Student.branch, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "Branch" object to be referenced by only a single "Student" object at a time via the Student.branch relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-04 08:51:44,307 - ERROR - manageStudentFunction - admin_get_students_details | error 'Branch' object is not subscriptable
+2024-10-04 17:32:36,828 - ERROR - manageStudentFunction - search_students | error 'NoneType' object has no attribute 'split'
+2024-10-04 17:32:36,841 - ERROR - manageStudentFunction - search_students | error 'NoneType' object has no attribute 'split'
+2024-10-04 17:32:36,880 - ERROR - manageStudentFunction - search_students | error 'NoneType' object has no attribute 'split'
+2024-10-04 17:32:36,893 - ERROR - manageStudentFunction - search_students | error 'NoneType' object has no attribute 'split'
+2024-10-04 17:33:34,719 - ERROR - manageStudentFunction - search_students | error 'NoneType' object has no attribute 'split'
+2024-10-04 17:35:55,109 - ERROR - manageStudentFunction - search_students | error Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Student.branch has an attribute 'branch_name'
+2024-10-04 17:40:11,777 - ERROR - manageStudentFunction - search_students | error Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Student.branch has an attribute 'branch_name'
+2024-10-04 17:40:36,226 - ERROR - manageStudentFunction - search_students | error Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Student.branch has an attribute 'branch_name'
+2024-10-04 17:51:37,835 - ERROR - manageStudentFunction - search_students | error Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Student.branch has an attribute 'branch_name'
+2024-10-04 20:31:52,788 - ERROR - manageStudent - searching_student | error 'dict' object has no attribute 'credentials'
+2024-10-04 20:33:03,987 - ERROR - manageStudent - searching_student | error 'NoneType' object is not subscriptable
+2024-10-04 20:35:22,571 - ERROR - manageStudent - searching_student | error 'NoneType' object is not subscriptable
+2024-10-04 20:36:21,445 - ERROR - manageStudent - searching_student | error 'NoneType' object is not subscriptable
+2024-10-04 20:38:26,197 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:39:19,305 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:41:06,675 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:42:53,883 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:43:25,015 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:44:50,804 - ERROR - manageStudent - searching_student | error 'bearer_token' is an invalid keyword argument for print()
+2024-10-04 20:45:23,072 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:46:15,266 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:48:19,599 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:54:34,791 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:55:18,892 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:56:40,928 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 20:58:30,567 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 21:00:02,388 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 21:00:20,057 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 21:02:13,157 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 21:03:38,720 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 21:04:23,779 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 21:06:12,617 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-04 21:07:44,100 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
