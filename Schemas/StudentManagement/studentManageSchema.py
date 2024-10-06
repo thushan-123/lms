@@ -1,7 +1,7 @@
 from datetime import datetime, date
 from typing import Optional
 from nanoid import generate
-from pydantic import BaseModel, EmailStr, Json, constr, conint, field_validator, Field, validator
+from pydantic import BaseModel, EmailStr, Json, constr, field_validator, Field
 
 class StudentSchema(BaseModel):
     student_id: str = Field(default_factory= lambda : generate(size=15)) # auto gen student id
@@ -53,7 +53,7 @@ class AddStudent(BaseModel):
 
     @classmethod
     @field_validator('student')
-    def student_list_length(cls, value):  # Improved naming convention
+    def student_list_length(cls, value):
         if not (len(value) == 1):
             raise ValueError("Student list must contain exactly one student.")
         return value

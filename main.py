@@ -5,6 +5,8 @@ from starlette.middleware.cors import CORSMiddleware
 from Routes.UsersAuthentication.Admin import admin
 from Loggers.log import err_log, app_log
 from Routes.StudentManagement import manageStudent
+from Routes.BranchManagement import manageBranch
+from Routes.ManagerManagement import manageManager
 
 
 app = FastAPI()
@@ -29,3 +31,5 @@ app.add_middleware(
 
 app.include_router(admin.router, prefix="/api/v1/auth/admin")
 app.include_router(manageStudent.router, prefix="/api/v1/manageStudent")
+app.include_router(manageBranch.router, prefix="/api/v1/manageBranch")
+app.include_router(manageManager.router, prefix="/api/v1/manageManager")

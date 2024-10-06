@@ -25,19 +25,21 @@ class BranchManager(Base):
     __tablename__ = "branch_manager"
 
     manager_id = Column(String(10), nullable=False, index=True, primary_key=True, default= lambda : generate(size=10))
+    manager_name = Column(String(30), index=True, nullable=False, unique=True)
+    manager_email = Column(String(40), nullable=False, index=True, unique=True)
 
 
 class Branch(Base):
     __tablename__ = "branch"
 
-    branch_id = Column(String(8), nullable=False, index=True, primary_key=True, default= lambda : generate(size=8))
+    branch_id = Column(String(8), nullable=False, index=True, primary_key=True)
     branch_name = Column(String(20), nullable=False, unique=True, index=True)
     address = Column(JSON, nullable=False)
+    email = Column(String(40), nullable=False, unique=True, index=True)
     location = Column(String(10), nullable=False)
     mobile = Column(Integer, nullable=False, index=True)
     open_time = Column(Time, nullable=False)
     close_time = Column(Time, nullable=False)
-    hall = Column(JSON)
     description = Column(Text)
     active = Column(Boolean, nullable=False, default=True)
     branch_manager_id = Column(String(10)) # , ForeignKey("branch_manager.manager_id")
@@ -46,8 +48,30 @@ class Branch(Base):
 
     # relationship -> Student
     student = relationship("Student", back_populates="branch", cascade="all, delete-orphan", lazy="joined")
+    # relationship -> BranchHalls
+    branch_halls = relationship("BranchHalls", back_populates="branch", cascade="all, delete-orphan", lazy="joined")
+    #relationship -> BranchImages
+    branch_images = relationship("BranchImages", back_populates="branch", cascade="all, delete-orphan", lazy="joined")
 
+class BranchHalls(Base):
+    __tablename__ = "branch_halls"
 
+    row_id = Column(Integer, autoincrement=True, primary_key=True)
+    hall_name = Column(String(10), nullable=False, index=True)
+    branch_id = Column(String(8), ForeignKey('branch.branch_id'), index=True)
+
+    # relationship -> Branch
+    branch = relationship("Branch", back_populates="branch_halls", lazy="joined")
+
+class BranchImages(Base):
+    __tablename__ = "branch_images"
+
+    image_id = Column(Integer, primary_key=True, autoincrement=True)
+    image_url = Column(Text, nullable=False)
+    branch_id = Column(String(8), ForeignKey("branch.branch_id"), index=True)
+
+    # relationship -> Branch
+    branch = relationship("Branch", back_populates="branch_images", lazy="joined")
 
 class Student(Base):
     __tablename__ = "student"

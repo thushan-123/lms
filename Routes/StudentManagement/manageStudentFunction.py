@@ -141,8 +141,15 @@ async def get_student_data(db: Session, student_id: str):
             mobile = siblingData.mobile
         ) for siblingData in data.student_siblings]
 
-        profile_image_url = [ProfileImageStudentSchema(profile_image_url = url.profile_image_url) for url in data.student_profile_image]
-        certificate_image_url = [CertificateImagesStudentSchema(certificate_image_url = url.certificate_image_url) for url in data.student_certificate_images]
+        #profile_image_url = [ProfileImageStudentSchema(profile_image_url = url.profile_image_url) for url in data.student_profile_image]
+        #certificate_image_url = [CertificateImagesStudentSchema(certificate_image_url = url.certificate_image_url) for url in data.student_certificate_images]
+        profile_image_url = []
+        for url in data.student_profile_image:
+            profile_image_url.append(url.profile_image_url)
+
+        certificate_image_url = []
+        for url in data.student_certificate_images:
+            certificate_image_url.append(url.certificate_image_url)
 
         return AddStudent(
             student = [student],

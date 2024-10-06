@@ -118,3 +118,34 @@ mother_address
 2024-10-04 21:04:23,779 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
 2024-10-04 21:06:12,617 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
 2024-10-04 21:07:44,100 - ERROR - manageStudent - searching_student | error 'str' object has no attribute 'credentials'
+2024-10-05 09:37:47,538 - ERROR - manageBranchFunction - create_branch | error __init__() takes 1 positional argument but 3 were given
+2024-10-05 09:39:07,316 - ERROR - manageBranchFunction - create_branch | error __init__() takes 1 positional argument but 3 were given
+2024-10-05 09:46:13,660 - ERROR - manageBranchFunction - create_branch | error Class 'builtins.generator' is not mapped
+2024-10-05 09:53:54,939 - ERROR - manageBranchFunction - create_branch | error (pymysql.err.IntegrityError) (1062, "Duplicate entry 'mainbranch' for key 'ix_branch_branch_name'")
+[SQL: INSERT INTO branch (branch_id, branch_name, address, email, location, mobile, open_time, close_time, description, active, branch_manager_id, created) VALUES (%(branch_id)s, %(branch_name)s, %(address)s, %(email)s, %(location)s, %(mobile)s, %(open_time)s, %(close_time)s, %(description)s, %(active)s, %(branch_manager_id)s, %(created)s)]
+[parameters: {'branch_id': '7l1SshU4', 'branch_name': 'mainbranch', 'address': '{"line 1": "123 Main St", "line2": "Springfield"}', 'email': 'mainbranch@example.com', 'location': 'gampha', 'mobile': 1234567890, 'open_time': datetime.time(9, 0), 'close_time': datetime.time(17, 0), 'description': 'Main branch of the company', 'active': 1, 'branch_manager_id': 'mgr12345', 'created': datetime.datetime(2024, 10, 5, 9, 53, 54, 936829, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-05 11:11:05,591 - ERROR - manageBranchFunction - delete_branch_cascade | error (pymysql.err.IntegrityError) (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`kandy_LMS`.`branch_halls`, CONSTRAINT `branch_halls_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branch` (`branch_id`))')
+[SQL: DELETE FROM branch WHERE branch.branch_id IN (%(branch_id_1_1)s)]
+[parameters: {'branch_id_1_1': 'bCDiiLEm'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-06 16:21:15,030 - ERROR - manageBranchFunction - update_branch | error __init__() takes 1 positional argument but 2 were given
+2024-10-06 16:30:13,994 - ERROR - manageBranchFunction - update_branch | error 'branch_hall' is an invalid keyword argument for BranchHalls
+2024-10-06 17:19:49,325 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'certificate_image_url'
+2024-10-06 17:19:57,865 - ERROR - manageStudentFunction - admin_get_students_details | error 'NoneType' object has no attribute 'branch_name'
+2024-10-06 17:23:33,242 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'certificate_image_url'
+2024-10-06 17:24:39,265 - ERROR - manageStudentFunction - get_student_data | error 'Student' object has no attribute 'data'
+2024-10-06 17:25:43,338 - ERROR - manageStudent - getStudentDetails | error Unable to serialize unknown type: <class 'Databases.models.ProfileImagesStudent'>
+2024-10-06 17:32:09,406 - ERROR - manageStudentFunction - get_student_data | error 'CertificateImagesStudent' object has no attribute 'profile_image_url'
+2024-10-06 17:53:24,421 - ERROR - manageStudentFunction - get_branch_data | error 1 validation error for BranchUpdateSchema
+address
+  JSON input should be string, bytes or bytearray [type=json_type, input_value={'line 1': '123 Main St', 'line2': 'Springfield'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/json_type branch_id: 6U6PmsUI
+2024-10-06 17:55:10,090 - ERROR - manageStudentFunction - get_branch_data | error 1 validation error for BranchUpdateRequestSchema
+branch.0
+  Input should be a valid dictionary or instance of BranchSchema [type=model_type, input_value=BranchUpdateSchema(branch...h_manager_id='mgr12345'), input_type=BranchUpdateSchema]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type branch_id: 6U6PmsUI
+2024-10-06 18:01:22,719 - ERROR - manageStudentFunction - get_branch_data | error 1 validation error for BranchUpdateRequestSchema
+branch.0
+  Input should be a valid dictionary or instance of BranchSchema [type=model_type, input_value=BranchUpdateSchema(branch...h_manager_id='mgr12345'), input_type=BranchUpdateSchema]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type branch_id: 6U6PmsUI
