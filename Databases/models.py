@@ -1,3 +1,5 @@
+from operator import index
+
 from Databases.database import Base
 from sqlalchemy import Column, Integer, String, Boolean, Date, ForeignKey, JSON, DateTime, Time, Text
 import uuid
@@ -28,6 +30,9 @@ class BranchManager(Base):
     manager_name = Column(String(30), index=True, nullable=False, unique=True)
     manager_email = Column(String(40), nullable=False, index=True, unique=True)
 
+    # relationship -> branch
+    branch = relationship("Branch", back_populates="branch_manager", cascade="all, delete-orphan", lazy="joined")
+
 
 class Branch(Base):
     __tablename__ = "branch"
@@ -42,7 +47,7 @@ class Branch(Base):
     close_time = Column(Time, nullable=False)
     description = Column(Text)
     active = Column(Boolean, nullable=False, default=True)
-    branch_manager_id = Column(String(10)) # , ForeignKey("branch_manager.manager_id")
+    branch_manager_id = Column(String(10), ForeignKey("branch_manager.manager_id"))
     created = Column(DateTime, nullable=False, default= lambda : get_sl_DateTime())
 
 
@@ -50,8 +55,11 @@ class Branch(Base):
     student = relationship("Student", back_populates="branch", cascade="all, delete-orphan", lazy="joined")
     # relationship -> BranchHalls
     branch_halls = relationship("BranchHalls", back_populates="branch", cascade="all, delete-orphan", lazy="joined")
-    #relationship -> BranchImages
+    # relationship -> BranchImages
     branch_images = relationship("BranchImages", back_populates="branch", cascade="all, delete-orphan", lazy="joined")
+    # relationship ->branch_manager
+    branch_manager = relationship("BranchManager", back_populates="branch", lazy="joined")
+    # relationship -> Teacher
 
 class BranchHalls(Base):
     __tablename__ = "branch_halls"
@@ -159,3 +167,39 @@ class CertificateImagesStudent(Base):
 
     # relationships
     student = relationship("Student", back_populates="student_certificate_images")
+
+class Teacher(Base):
+    __tablename__ = "teacher"
+
+    teacher_id = Column(String(36), primary_key=True, index=True)
+    teacher_firstname = Column(String(15), index=True, nullable=False)
+    teacher_lastname = Column(String(15), index=True, nullable=False)
+    teacher_email = Column(String(40), index=True, nullable=False)
+    teacher_mobile = Column(Integer, nullable=False, index=True)
+    subject = Column(String(15), nullable=False, index=True)
+    branch_id = Column(String(8), ForeignKey("branch.branch_id"))
+    education_level_id = Column(String(36), ForeignKey("education_level.education_level_id"), index=True)
+    password = Column(String(100))
+    teacher_address = Column(JSON)
+    province = Column(String(10))
+    district = Column(String(10))
+    home_town = Column(String(10))
+    teacher_gender = Column(Boolean)
+    teacher_NIC = Column(String(15))
+    teacher_school = Column(String(50))
+    teacher_description = Column(Text)
+    teacher_active = Column(Boolean, default=True)
+    created = Column(DateTime, default= lambda : get_sl_DateTime())
+
+    # relationship -> TeacherCertificateImages
+    teacher_certificate_images = relationship("TeacherCertificateImages", back_populates="teacher", cascade="all, delete-orphan", lazy="joined")
+
+class TeacherCertificateImages(Base):
+    __tablename__ = "teacher_certificate_images"
+
+    row_id = Column(Integer, primary_key=True, autoincrement=True)
+    teacher_id = Column(String(36), ForeignKey("teacher.teacher_id"),index=True, nullable=False)
+    image_url = Column(Text, nullable=False)
+
+    # relationship -> Teacher
+    teacher = relationship("Teacher", back_populates="teacher_certificate_images")

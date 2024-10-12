@@ -166,7 +166,7 @@ async def get_student_data(db: Session, student_id: str):
 
 async def admin_get_students_details(db: Session) -> list:
     try:
-        data_list = db.query(Student).options(joinedload(Student.branch)).all()
+        data_list = db.query(Student).all()
 
         if not data_list:
             return ["not found"]
@@ -175,7 +175,7 @@ async def admin_get_students_details(db: Session) -> list:
             "student_id": data.student_id,
             "firstname": data.firstname,
             "lastname": data.lastname,
-            "branch_name" : data.branch.branch_name,
+            "branch_name" : data.branch_id,
             "active": data.active
         } for data in data_list]
         return data_list_dict

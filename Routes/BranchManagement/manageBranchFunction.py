@@ -1,5 +1,4 @@
 import json
-
 from sqlalchemy.orm import Session, joinedload, selectinload
 from Loggers.log import err_log, app_log
 from Databases.models import Branch, BranchHalls, BranchImages
@@ -109,3 +108,26 @@ async def retrieve_branch(db: Session, branch_id: str):
     except Exception as e:
         err_log.error(f"manageStudentFunction - get_branch_data | error {e} branch_id: {str(branch_id)}")
         return None
+
+async def retrieve_branches(db: Session):
+    try:
+        data_object_list = db.query(Branch).options(joinedload(Branch.branch_manager)).all()
+
+        if not data_object_list:
+            return "not found or no branches"
+
+        data_list = [{
+            "branch_id": data.branch_id,
+            "branch_name": data.branch_name,
+            "manager_id": data.branch_manager.manager_id,
+            "branch_manager": data.branch_manager.manager_name,
+            "mobile": data.mobile,
+            "email": data.email,
+            "open_time": data.open_time
+        } for data in data_object_list]
+        app_log.info(f"manageBranchFunction - retrieve_branches | return data {str(data_list)}")
+        return data_list
+    except Exception as e:
+        err_log.error(f"manageBranchFunction - retrieve_branches | error {e}")
+        return None
+

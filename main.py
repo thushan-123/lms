@@ -7,6 +7,7 @@ from Loggers.log import err_log, app_log
 from Routes.StudentManagement import manageStudent
 from Routes.BranchManagement import manageBranch
 from Routes.ManagerManagement import manageManager
+from Routes.TeacherManagement import manageTeacher
 
 
 app = FastAPI()
@@ -33,3 +34,4 @@ app.include_router(admin.router, prefix="/api/v1/auth/admin")
 app.include_router(manageStudent.router, prefix="/api/v1/manageStudent")
 app.include_router(manageBranch.router, prefix="/api/v1/manageBranch")
 app.include_router(manageManager.router, prefix="/api/v1/manageManager")
+app.include_router(manageTeacher.router, prefix="/api/v1/manageTeacher")

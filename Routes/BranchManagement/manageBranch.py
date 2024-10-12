@@ -5,7 +5,7 @@ from Function.function import db_dependency
 from Authorization.auth import oauth2_scheme, decode_token_access_role
 from Loggers.log import app_log, err_log
 from Schemas.BranchManagement.branchManagementSchema import BranchRequestSchema, DeleteBranchSchema, UpdateActiveField, BranchUpdateRequestSchema
-from .manageBranchFunction import create_branch, delete_branch_cascade, update_branch_active_field, update_branch, retrieve_branch
+from .manageBranchFunction import create_branch, delete_branch_cascade, update_branch_active_field, update_branch, retrieve_branch, retrieve_branches
 
 router = APIRouter()
 
@@ -88,4 +88,21 @@ async def selecting_branch_details(branch_id: str, db: db_dependency, token: str
             return JSONResponse(status_code=status.HTTP_401_UNAUTHORIZED, content={"status": False, "detail": "unauthorized access"})
     except Exception as e:
         err_log.error(f"manageBranch - update_branch_data | error {e} branch_id: {str(branch_id)}")
+        return JSONResponse(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content={"status": False, "detail": "internal server error"})
+
+
+@router.get("/getBranches")
+async def selecting_branches(db: db_dependency, token: str = Depends(oauth2_scheme)):
+    try:
+        payload = await decode_token_access_role(token.credentials,['admin','manager','academic'])
+        if payload:
+            result = await retrieve_branches(db)
+            if result:
+                return JSONResponse(status_code=status.HTTP_200_OK, content={"status": True, "data": jsonable_encoder(result)})
+            else:
+                return JSONResponse(status_code=status.HTTP_400_BAD_REQUEST, content={"status": False, "detail": "bad request"})
+        else:
+            return JSONResponse(status_code=status.HTTP_401_UNAUTHORIZED, content={"status": False, "detail": "unauthorized access"})
+    except Exception as e:
+        err_log.error(f"manageBranch - getBranches | error {e}")
         return JSONResponse(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content={"status": False, "detail": "internal server error"})

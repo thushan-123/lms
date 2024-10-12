@@ -381,3 +381,69 @@
 2024-10-06 18:06:03,874 - INFO - Database tables create successfully
 2024-10-06 18:06:10,468 - INFO - manageBranchFunction - update_branch | branch updates ("{'branch_id': '6U6PmsUI', 'branch_name': 'mainbranch', 'address': {'line 1': '123 Main St', 'line2': 'Springfield'}, 'email': 'mainbranch@example.com', 'location': 'gampha', 'mobile': 1234567890, 'open_time': datetime.time(9, 0), 'close_time': datetime.time(17, 0, 30), 'description': 'Main branch of the company', 'branch_manager_id': 'mgr12345'}", "['Hall A', 'Hall V', 'Hall C']", "['https://example.com/image12.jpg', 'https://example.com/image22.jpg']")
 2024-10-06 20:11:25,204 - INFO - manageManagerFunction - retrieve_managers_details | retrieve data [{'manager_id': 'GKOm3ahM-y', 'manager_name': 'nimal'}, {'manager_id': 'osXerMzMXC', 'manager_name': 'kamal'}]
+2024-10-08 07:59:18,458 - INFO - Database tables create successfully
+2024-10-08 07:59:23,701 - INFO - Database tables create successfully
+2024-10-08 08:02:14,636 - INFO - Database tables create successfully
+2024-10-08 08:02:32,880 - INFO - Database tables create successfully
+2024-10-08 08:02:38,508 - INFO - manageManagerFunction - create_manager | create manager ('nimal', 'nimal@gmail.com')
+2024-10-08 08:03:08,978 - INFO - manageManagerFunction - retrieve_managers_details | retrieve data [{'manager_id': 'RX_gINRzdY', 'manager_name': 'nimal'}]
+2024-10-08 08:03:31,093 - INFO - manageBranchFunction - create_branch | create successfully ("{'branch_id': 'SofzrblP', 'branch_name': 'mainbranch', 'address': {'line 1': '123 Main St', 'line2': 'Springfield'}, 'email': 'mainbranch@example.com', 'location': 'gampha', 'mobile': 1234567890, 'open_time': datetime.time(9, 0), 'close_time': datetime.time(17, 0), 'description': 'Main branch of the company', 'branch_manager_id': 'RX_gINRzdY'}", "['Hall A', 'Hall B']", "['https://example.com/image1.jpg', 'https://example.com/image2.jpg']")
+2024-10-08 08:09:14,695 - INFO - Database tables create successfully
+2024-10-08 08:12:16,968 - INFO - Database tables create successfully
+2024-10-08 08:15:23,221 - INFO - Database tables create successfully
+2024-10-08 08:15:36,115 - INFO - Database tables create successfully
+2024-10-08 08:17:04,072 - INFO - Database tables create successfully
+2024-10-08 08:18:23,401 - INFO - Database tables create successfully
+2024-10-08 08:19:06,662 - INFO - Database tables create successfully
+2024-10-08 08:19:58,351 - INFO - Database tables create successfully
+2024-10-08 08:20:06,197 - INFO - manageBranchFunction - retrieve_branches | return data [{'branch_id': 'SofzrblP', 'branch_name': 'mainbranch', 'manager_id': 'RX_gINRzdY', 'branch_manager': 'nimal', 'mobile': 1234567890, 'address': {'line 1': '123 Main St', 'line2': 'Springfield'}, 'open_time': datetime.time(9, 0)}]
+2024-10-08 08:20:38,222 - INFO - Database tables create successfully
+2024-10-08 08:20:40,329 - INFO - manageBranchFunction - retrieve_branches | return data [{'branch_id': 'SofzrblP', 'branch_name': 'mainbranch', 'manager_id': 'RX_gINRzdY', 'branch_manager': 'nimal', 'mobile': 1234567890, 'address': {'line 1': '123 Main St', 'line2': 'Springfield'}, 'open_time': datetime.time(9, 0)}]
+2024-10-08 08:21:36,977 - INFO - Database tables create successfully
+2024-10-08 08:21:39,685 - INFO - manageBranchFunction - retrieve_branches | return data [{'branch_id': 'SofzrblP', 'branch_name': 'mainbranch', 'manager_id': 'RX_gINRzdY', 'branch_manager': 'nimal', 'mobile': 1234567890, 'email': 'mainbranch@example.com', 'open_time': datetime.time(9, 0)}]
+2024-10-12 13:47:30,188 - INFO - Database tables create successfully
+2024-10-12 13:47:33,219 - INFO - manageManagerFunction - retrieve_managers_details | retrieve data [{'manager_id': 'RX_gINRzdY', 'manager_name': 'nimal'}]
+2024-10-12 13:48:00,943 - INFO - manageManagerFunction - create_manager | create manager ('kamal', 'kamal@gmail.com')
+2024-10-12 13:53:49,178 - INFO - manageBranchFunction - retrieve_branches | return data [{'branch_id': 'SofzrblP', 'branch_name': 'mainbranch', 'manager_id': 'RX_gINRzdY', 'branch_manager': 'nimal', 'mobile': 1234567890, 'email': 'mainbranch@example.com', 'open_time': datetime.time(9, 0)}]
+2024-10-12 13:55:50,250 - INFO - manageStudentFunction - insert_get_educational_level | data retrieve successfully
+2024-10-12 13:55:50,250 - INFO - manageStudent - get_education_level | send payload to user
+2024-10-12 13:58:10,188 - INFO - adminFunction admin_verify_get_data | verify the password
+2024-10-12 13:58:10,190 - INFO - adminFunction get_admin_data | return the payload
+2024-10-12 13:58:10,190 - INFO - adminLogin - return the access token thush
+2024-10-12 14:12:45,566 - INFO - Database tables create successfully
+2024-10-12 14:18:35,092 - INFO - Database tables create successfully
+2024-10-12 14:19:13,907 - INFO - Database tables create successfully
+2024-10-12 14:20:12,725 - INFO - Database tables create successfully
+2024-10-12 14:21:05,175 - INFO - Database tables create successfully
+2024-10-12 14:21:26,856 - INFO - Database tables create successfully
+2024-10-12 14:23:10,170 - INFO - manageTeacherFunction - create_new_teacher | teacher credentials {'teacher_id': UUID('6fafffa9-de12-493d-8004-283be677d00b'), 'teacher_firstname': 'ruwan', 'teacher_lastname': 'darshana', 'teacher_email': 'ruwan@gmail.com', 'teacher_mobile': 775651884, 'subject': 'combine maths', 'branch_id': 'SofzrblP', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0'}
+2024-10-12 14:24:12,239 - INFO - Database tables create successfully
+2024-10-12 14:31:43,331 - INFO - Database tables create successfully
+2024-10-12 14:39:01,109 - INFO - Database tables create successfully
+2024-10-12 14:46:36,505 - INFO - Database tables create successfully
+2024-10-12 14:46:38,973 - INFO - manageTeacherFunction - updateTeacher | teacher credentials {'teacher_id': '6fafffa9-de12-493d-8004-283be677d00b', 'teacher_firstname': 'ruwan', 'teacher_lastname': 'darshana', 'teacher_email': 'ruwan@gmail.com', 'teacher_mobile': 775651884, 'subject': 'combine maths', 'branch_id': 'SofzrblP', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'teacher_address': {'lane1': 'road1', 'lane2': 'gampaha'}, 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'teacher_gender': True, 'teacher_NIC': '200236503381', 'teacher_school': 'bandaranayake colledge', 'teacher_description': 'combine maths is awsome'} urls ['https://example.com/sfdgsdf', 'https://example.com/argdzfgdf']
+2024-10-12 14:47:48,510 - INFO - Database tables create successfully
+2024-10-12 14:51:09,679 - INFO - Database tables create successfully
+2024-10-12 14:52:37,662 - INFO - Database tables create successfully
+2024-10-12 14:52:39,605 - INFO - manageTeacherFunction - updateTeacher | teacher credentials {'teacher_id': '6fafffa9-de12-493d-8004-283be677d00b', 'teacher_firstname': 'ruwan', 'teacher_lastname': 'darshana', 'teacher_email': 'ruwan@gmail.com', 'teacher_mobile': 775651884, 'subject': 'combine maths', 'branch_id': 'SofzrblP', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'teacher_address': {'lane1': 'road1', 'lane2': 'gampaha'}, 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'teacher_gender': True, 'teacher_NIC': '200236503381', 'teacher_school': 'bandaranayake colledge', 'teacher_description': 'combine maths is awsome'} urls ['https://example.com/sfdgsdf', 'https://example.com/argdzfgdf']
+2024-10-12 15:36:52,496 - INFO - Database tables create successfully
+2024-10-12 15:39:25,384 - INFO - Database tables create successfully
+2024-10-12 15:42:41,674 - INFO - manageTeacherFunction - teacher_credentials | retrieve teacher credentials 6fafffa9-de12-493d-8004-283be677d00b
+2024-10-12 15:43:57,465 - INFO - Database tables create successfully
+2024-10-12 15:45:14,268 - INFO - Database tables create successfully
+2024-10-12 15:46:09,088 - INFO - Database tables create successfully
+2024-10-12 15:47:48,607 - INFO - Database tables create successfully
+2024-10-12 15:47:50,807 - INFO - manageTeacherFunction - teacher_credentials | retrieve teacher credentials 6fafffa9-de12-493d-8004-283be677d00b
+2024-10-12 15:48:40,897 - INFO - Database tables create successfully
+2024-10-12 15:48:44,787 - INFO - manageTeacherFunction - teacher_credentials | retrieve teacher credentials 6fafffa9-de12-493d-8004-283be677d00b
+2024-10-12 15:49:32,537 - INFO - manageTeacherFunction - teacher_credentials | retrieve teacher credentials 6fafffa9-de12-493d-8004-283be677d00b
+2024-10-12 16:37:46,638 - INFO - manageTeacherFunction - teacher_credentials | retrieve teacher credentials 6fafffa9-de12-493d-8004-283be677d00b
+2024-10-12 17:04:42,599 - INFO - Database tables create successfully
+2024-10-12 17:07:51,745 - INFO - manageTeacherFunction - change_teacher_status | change to status 6fafffa9-de12-493d-8004-283be677d00b 
+2024-10-12 17:11:56,298 - INFO - adminFunction admin_verify_get_data | verify the password
+2024-10-12 17:11:56,299 - INFO - adminFunction get_admin_data | return the payload
+2024-10-12 17:11:56,300 - INFO - adminLogin - return the access token thush
+2024-10-12 17:12:40,543 - INFO - manageTeacherFunction - teacher_credentials | retrieve teacher credentials 6fafffa9-de12-493d-8004-283be677d00b
+2024-10-12 17:18:00,442 - INFO - Database tables create successfully
+2024-10-12 17:18:47,282 - INFO - Database tables create successfully
+2024-10-12 17:21:30,991 - INFO - manageBranchFunction - retrieve_branches | return data [{'branch_id': 'SofzrblP', 'branch_name': 'mainbranch', 'manager_id': 'RX_gINRzdY', 'branch_manager': 'nimal', 'mobile': 1234567890, 'email': 'mainbranch@example.com', 'open_time': datetime.time(9, 0)}]
