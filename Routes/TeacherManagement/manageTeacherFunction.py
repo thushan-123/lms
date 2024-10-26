@@ -4,9 +4,11 @@ from Loggers.log import err_log, app_log
 from Databases.models import Teacher, TeacherCertificateImages
 from sqlalchemy import delete, update
 from Schemas.TeacherManagement.TeacherManagementSchema import TeacherSchema,TeacherUpdateSchema
+from Function.function import password_hash
 
 async def create_teacher(db: Session, teacher_credential: dict) -> bool:
     try:
+        teacher_credential["teacher_password"] = password_hash(teacher_credential["teacher_password"])
         db.add(Teacher(**teacher_credential))
         db.commit()
         app_log.info(f"manageTeacherFunction - create_new_teacher | teacher credentials {str(teacher_credential)}")

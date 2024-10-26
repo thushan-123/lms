@@ -1,17 +1,20 @@
 from fastapi import APIRouter, Depends, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
-from Function.function import db_dependency
+from Function.function import db_dependency,generate_unique_username, generate_unique_digit_number
 from Loggers.log import app_log,err_log
 from Schemas.StudentManagement.studentManageSchema import AddStudent, DeactivateStudent, DeleteStudent, SearchStudentSchema
 from Authorization.auth import decode_token_access_role, oauth2_scheme
-from .manageStudentFunction import get_educational_level, get_education_level_id, insert_student_all_data, \
-    insert_education_level, deactivate_students_field, delete_students_cascade, get_student_data, admin_get_students_details, \
+from .manageStudentFunction import  insert_student_all_data, deactivate_students_field, delete_students_cascade, get_student_data, admin_get_students_details, \
     search_students
+import uuid
+from Mail import mail
+from Mail.html import html_content_username_password
+from nanoid import generate
 
 router = APIRouter()
 
-
+'''
 @router.get("/educationLevels")
 async def get_education_levels(db: db_dependency, token: str = Depends(oauth2_scheme)):
     try:
@@ -28,24 +31,27 @@ async def get_education_levels(db: db_dependency, token: str = Depends(oauth2_sc
     except Exception as e:
         err_log.error(f"manageStudent - get_education_levels | server error: {e}")
         return JSONResponse(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content={"status": False, "detail": "internal server error"})
-
+'''
 
 @router.post("/addStudent")
 async def adding_student(request: AddStudent, db: db_dependency, token:str = Depends(oauth2_scheme)):
     try:
         payload = await decode_token_access_role(token.credentials, ['admin','manager','academic'])
         if payload is not None:
-            student_id: str = request.student[0].student_id
-            edu_level_name: str = request.student[0].education_level_name
+            student_id: str = str(generate_unique_digit_number())
+            student_email = request.student[0].email
+            username = generate_unique_username(request.student[0].firstname)
             student_data_dict: dict = dict(request.student[0])
-            student_data_dict.pop('education_level_name')
-            educational_level: bool = await insert_education_level(db, edu_level_name)
+            password = generate(size=8)
+            student_data_dict["student_id"] = student_id
+            student_data_dict["username"] = username
+            student_data_dict["password"] = password
 
-            if educational_level is not None:
-                student_data_dict['education_level_id'] = await get_education_level_id(db, edu_level_name)
             result = await insert_student_all_data(db,student_id,student_data_dict,dict(request.student_parents[0]),
                                                    request.siblings,request.profile_image_url[0],request.certificate_image_url)
             if result:
+                mail_ = mail.Mail(student_email,"Username and Password",html_content_username_password(username,password))
+                mail_.send()
                 return JSONResponse(status_code=status.HTTP_201_CREATED, content={"status": True, "detail": "data insert successfully"})
             else:
                 return JSONResponse(status_code=status.HTTP_406_NOT_ACCEPTABLE, content={"status": False, "detail": "data insert fail| data is duplicated"})

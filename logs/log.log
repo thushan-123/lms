@@ -447,3 +447,153 @@
 2024-10-12 17:18:00,442 - INFO - Database tables create successfully
 2024-10-12 17:18:47,282 - INFO - Database tables create successfully
 2024-10-12 17:21:30,991 - INFO - manageBranchFunction - retrieve_branches | return data [{'branch_id': 'SofzrblP', 'branch_name': 'mainbranch', 'manager_id': 'RX_gINRzdY', 'branch_manager': 'nimal', 'mobile': 1234567890, 'email': 'mainbranch@example.com', 'open_time': datetime.time(9, 0)}]
+2024-10-20 20:15:50,536 - INFO - Database tables create successfully
+2024-10-20 20:17:18,315 - INFO - Database tables create successfully
+2024-10-20 20:19:45,851 - INFO - Database tables create successfully
+2024-10-20 20:20:16,473 - INFO - Database tables create successfully
+2024-10-20 20:21:31,592 - INFO - Database tables create successfully
+2024-10-20 20:21:49,824 - INFO - Database tables create successfully
+2024-10-20 20:23:40,210 - INFO - Database tables create successfully
+2024-10-20 20:27:46,529 - INFO - Database tables create successfully
+2024-10-20 20:28:52,059 - INFO - Database tables create successfully
+2024-10-20 20:30:00,966 - INFO - Database tables create successfully
+2024-10-20 20:35:05,074 - INFO - Database tables create successfully
+2024-10-20 20:35:45,211 - INFO - Database tables create successfully
+2024-10-20 20:37:25,286 - INFO - Database tables create successfully
+2024-10-20 20:37:41,974 - INFO - Database tables create successfully
+2024-10-20 20:39:30,981 - INFO - Database tables create successfully
+2024-10-20 20:40:52,428 - INFO - Database tables create successfully
+2024-10-20 20:44:04,561 - INFO - Database tables create successfully
+2024-10-20 20:45:39,749 - INFO - Database tables create successfully
+2024-10-20 20:46:45,962 - INFO - Database tables create successfully
+2024-10-20 20:46:49,480 - INFO - manageOfficerFunction - add_officer | insert successfully  officer-data :{'officer_id': 'NoosM1ibPCSysBz', 'officer_firstname': 'ruwan', 'officer_lastname': 'darshana', 'password': 'Tf9o7OayXbtxNFM', 'officer_address': {'lane1': 'road1', 'lane2': 'gampaha'}, 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'officer_email': 'thushanmadhusanka3@gmail.com', 'officer_gender': True, 'officer_mobile': 775651884, 'branch_id': 'SofzrblP', 'officer_NIC': '200236503381', 'officer_school': 'bandaranayake colledge', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'officer_username': 'ruwan-pcq5u'} images: ['https://example.com/sfdgsdf', 'https://example.com/argdzfgdf']
+2024-10-20 20:49:03,494 - INFO - |Mails - mail| -> email send to thushanmadhusanka3@gmail.com
+2024-10-21 06:51:55,331 - INFO - Database tables create successfully
+2024-10-21 06:53:06,613 - INFO - Database tables create successfully
+2024-10-21 06:53:32,346 - INFO - Database tables create successfully
+2024-10-21 06:54:02,634 - INFO - manageOfficerFunction - add_officer | insert successfully  officer-data :{'officer_id': 'NVfUbFpITQFPqgL', 'officer_firstname': 'ruwan', 'officer_lastname': 'darshana', 'password': 'd9541a2b4932b41dc96119866f933098ef4e0409', 'officer_address': {'lane1': 'road1', 'lane2': 'gampaha'}, 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'officer_email': 'thushanmadhusanka3@gmail.com', 'officer_gender': True, 'officer_mobile': 775651884, 'branch_id': 'SofzrblP', 'officer_NIC': '200236503381', 'officer_school': 'bandaranayake colledge', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'officer_username': 'ruwan-lr3gt'} images: ['https://example.com/sfdgsdf', 'https://example.com/argdzfgdf']
+2024-10-21 06:56:16,492 - INFO - |Mails - mail| -> email send to thushanmadhusanka3@gmail.com
+2024-10-21 06:56:17,772 - INFO - Database tables create successfully
+2024-10-21 06:58:31,629 - INFO - Database tables create successfully
+2024-10-21 07:00:23,914 - INFO - manageOfficerFunction - add_officer | insert successfully  officer-data :{'officer_id': 'Go-hlr-KyFL164c', 'officer_firstname': 'ruwan', 'officer_lastname': 'darshana', 'password': '433aa31f4d60e17d9026ec541d42fcaebd04553b', 'officer_address': {'lane1': 'road1', 'lane2': 'gampaha'}, 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'officer_email': 'thushanmadhusanka3@gmail.com', 'officer_gender': True, 'officer_mobile': 775651884, 'branch_id': 'SofzrblP', 'officer_NIC': '200236503381', 'officer_school': 'bandaranayake colledge', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'officer_username': 'ruwan-zrl3h'} images: ['https://example.com/sfdgsdf', 'https://example.com/argdzfgdf']
+2024-10-21 07:02:37,036 - INFO - |Mails - mail| -> email send to thushanmadhusanka3@gmail.com
+2024-10-21 07:03:01,919 - INFO - Database tables create successfully
+2024-10-21 07:04:07,142 - INFO - Database tables create successfully
+2024-10-21 07:04:26,871 - INFO - manageOfficerFunction - add_officer | insert successfully  officer-data :{'officer_id': 'MpWu0dgyKNrrrHA', 'officer_firstname': 'ruwan', 'officer_lastname': 'darshana', 'password': 'bac13dc4f9a5131d6429e26137c0352f9f7c2c75', 'officer_address': {'lane1': 'road1', 'lane2': 'gampaha'}, 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'officer_email': 'thushanmadhusanka3@gmail.com', 'officer_gender': True, 'officer_mobile': 775651884, 'branch_id': 'SofzrblP', 'officer_NIC': '200236503381', 'officer_school': 'bandaranayake colledge', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'officer_username': 'ruwan-mdmbi'} images: ['https://example.com/sfdgsdf', 'https://example.com/argdzfgdf']
+2024-10-21 07:06:40,849 - INFO - |Mails - mail| -> email send to thushanmadhusanka3@gmail.com
+2024-10-23 09:23:39,827 - INFO - Database tables create successfully
+2024-10-23 09:26:49,626 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:34:02,110 - INFO - Database tables create successfully
+2024-10-23 09:34:05,523 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:34:27,170 - INFO - Database tables create successfully
+2024-10-23 09:34:30,305 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:36:30,079 - INFO - Database tables create successfully
+2024-10-23 09:36:31,453 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:40:22,126 - INFO - Database tables create successfully
+2024-10-23 09:41:59,644 - INFO - Database tables create successfully
+2024-10-23 09:44:00,409 - INFO - Database tables create successfully
+2024-10-23 09:44:18,152 - INFO - Database tables create successfully
+2024-10-23 09:44:22,851 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:46:19,803 - INFO - Database tables create successfully
+2024-10-23 09:46:25,178 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:49:47,431 - INFO - Database tables create successfully
+2024-10-23 09:49:50,138 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:50:47,140 - INFO - Database tables create successfully
+2024-10-23 09:50:50,023 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:51:18,535 - INFO - Database tables create successfully
+2024-10-23 09:51:20,250 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:51:49,366 - INFO - Database tables create successfully
+2024-10-23 09:51:56,847 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:52:19,219 - INFO - Database tables create successfully
+2024-10-23 09:52:20,932 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:53:01,129 - INFO - Database tables create successfully
+2024-10-23 09:53:11,627 - INFO - Database tables create successfully
+2024-10-23 09:53:15,317 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:53:42,843 - INFO - Database tables create successfully
+2024-10-23 09:54:13,725 - INFO - Database tables create successfully
+2024-10-23 09:54:20,938 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 09:55:25,768 - INFO - Database tables create successfully
+2024-10-23 09:56:31,319 - INFO - Database tables create successfully
+2024-10-23 09:56:46,969 - INFO - Database tables create successfully
+2024-10-23 09:56:49,436 - INFO - retrieve data officer details using officer_id: MpWu0dgyKNrrrHA
+2024-10-23 10:00:04,972 - INFO - Database tables create successfully
+2024-10-23 10:23:03,272 - INFO - Database tables create successfully
+2024-10-23 13:12:30,655 - INFO - Database tables create successfully
+2024-10-23 13:20:48,325 - INFO - Database tables create successfully
+2024-10-23 16:07:32,691 - INFO - Database tables create successfully
+2024-10-23 16:10:13,931 - INFO - officer detail update successfully data : {'officer_id': 'MpWu0dgyKNrrrHA', 'officer_firstname': 'kamal', 'officer_lastname': 'darshana', 'officer_address': {'lane1': 'road1', 'lane2': 'gampaha'}, 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'officer_email': 'thushanmadhusanka3@gmail.com', 'officer_gender': True, 'officer_mobile': 775651894, 'branch_id': 'SofzrblP', 'officer_NIC': '200236503381', 'officer_school': 'bandaranayake colledge', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0'}
+2024-10-23 18:35:02,114 - INFO - Database tables create successfully
+2024-10-23 18:37:44,852 - INFO - change the officer status officer_id: MpWu0dgyKNrrrHA - current_status True to change False
+2024-10-23 18:38:17,987 - INFO - change the officer status officer_id: MpWu0dgyKNrrrHA - current_status False to change True
+2024-10-24 20:23:12,430 - INFO - Database tables create successfully
+2024-10-24 20:25:46,751 - INFO - Database tables create successfully
+2024-10-24 20:28:03,195 - INFO - Database tables create successfully
+2024-10-24 20:28:52,405 - INFO - Database tables create successfully
+2024-10-24 20:29:13,648 - INFO - Database tables create successfully
+2024-10-24 20:30:34,036 - INFO - Database tables create successfully
+2024-10-24 20:33:07,447 - INFO - Database tables create successfully
+2024-10-24 20:33:32,393 - INFO - Database tables create successfully
+2024-10-24 20:33:59,430 - INFO - Database tables create successfully
+2024-10-24 20:36:29,802 - INFO - Database tables create successfully
+2024-10-24 20:36:32,906 - INFO - retrieve the officers information : branch_id None
+2024-10-24 20:37:04,746 - INFO - Database tables create successfully
+2024-10-24 20:37:06,750 - INFO - retrieve the officers information : branch_id None
+2024-10-24 20:37:26,665 - INFO - Database tables create successfully
+2024-10-24 20:37:49,224 - INFO - Database tables create successfully
+2024-10-24 20:38:09,550 - INFO - Database tables create successfully
+2024-10-24 20:38:14,288 - INFO - retrieve the officers information : branch_id None
+2024-10-24 20:41:35,257 - INFO - officer search data retrieve successfully
+2024-10-24 20:42:53,795 - INFO - officer search data retrieve successfully
+2024-10-24 20:43:23,254 - INFO - officer search data retrieve successfully
+2024-10-24 20:44:37,219 - INFO - Database tables create successfully
+2024-10-24 20:46:05,188 - INFO - delete officers - officer_id : ['MpWu0dgyKNrrrHA']
+2024-10-25 20:34:01,900 - INFO - Database tables create successfully
+2024-10-25 20:35:42,249 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-25 20:35:42,275 - INFO - managementStudent - getStudentDetailsStudent | send data student_id OG8ylGU_Bn_PSic
+2024-10-25 20:43:15,856 - INFO - Database tables create successfully
+2024-10-25 20:44:30,258 - INFO - Database tables create successfully
+2024-10-25 20:44:59,561 - INFO - Database tables create successfully
+2024-10-25 20:45:42,946 - INFO - Database tables create successfully
+2024-10-25 20:46:52,314 - INFO - add a new education level 02d7c5e0-c504-48de-bc1f-7184eacd65b9 grade 1
+2024-10-25 20:48:11,640 - INFO - officer search data retrieve successfully
+2024-10-25 20:48:45,773 - INFO - manageOfficerFunction - add_officer | insert successfully  officer-data :{'officer_id': 'NgB4QtHQrErgoYT', 'officer_firstname': 'ruwan', 'officer_lastname': 'darshana', 'password': '5efb22dcc36cb11a1bfd0148ee1615cb49e00a26', 'officer_address': {'lane1': 'road1', 'lane2': 'gampaha'}, 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'officer_email': 'thushanmadhusanka3@gmail.com', 'officer_gender': True, 'officer_mobile': 775651884, 'branch_id': 'SofzrblP', 'officer_NIC': '200236503381', 'officer_school': 'bandaranayake colledge', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'officer_username': 'ruwan-437ju'} images: ['https://example.com/sfdgsdf', 'https://example.com/argdzfgdf']
+2024-10-25 20:50:59,222 - INFO - |Mails - mail| -> email send to thushanmadhusanka3@gmail.com
+2024-10-25 20:50:59,245 - INFO - add a new education level d0d36ac0-bfea-41b0-986f-23ec9e8f1bcf grade 1
+2024-10-25 20:51:00,391 - INFO - Database tables create successfully
+2024-10-25 20:51:09,008 - INFO - add a new education level 94128ecb-5544-4567-8036-babf3e93f3db grade 1
+2024-10-25 20:52:46,223 - INFO - Database tables create successfully
+2024-10-25 20:52:48,829 - INFO - add a new education level 7cc26716-4e3a-46ab-b40d-5de6cafadb9c grade 1
+2024-10-25 20:53:52,631 - INFO - retrieve the education level : [{'education_level_id': '02d7c5e0-c504-48de-bc1f-7184eacd65b9', 'education_level_name': 'grade 1'}, {'education_level_id': '7cc26716-4e3a-46ab-b40d-5de6cafadb9c', 'education_level_name': 'grade 1'}, {'education_level_id': '94128ecb-5544-4567-8036-babf3e93f3db', 'education_level_name': 'grade 1'}, {'education_level_id': 'd0d36ac0-bfea-41b0-986f-23ec9e8f1bcf', 'education_level_name': 'grade 1'}, {'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'education_level_name': 'grade 10'}, {'education_level_id': 'd6235d5a-ffe2-4299-8e53-1e5abebf2ee9', 'education_level_name': 'grade 11'}]
+2024-10-25 20:55:05,457 - INFO - Database tables create successfully
+2024-10-25 20:58:04,647 - INFO - Database tables create successfully
+2024-10-25 21:01:19,939 - INFO - Database tables create successfully
+2024-10-25 21:02:14,154 - INFO - Database tables create successfully
+2024-10-25 21:05:43,705 - INFO - manageBranchFunction - retrieve_branches | return data [{'branch_id': 'SofzrblP', 'branch_name': 'mainbranch', 'manager_id': 'RX_gINRzdY', 'branch_manager': 'nimal', 'mobile': 1234567890, 'email': 'mainbranch@example.com', 'open_time': datetime.time(9, 0)}]
+2024-10-25 21:06:02,850 - INFO - manageStudentFunction - insert_student_all_data | data insert successfully
+2024-10-26 06:24:46,730 - INFO - Database tables create successfully
+2024-10-26 06:24:55,948 - INFO - Database tables create successfully
+2024-10-26 06:28:15,766 - INFO - Database tables create successfully
+2024-10-26 06:30:27,883 - INFO - Database tables create successfully
+2024-10-26 06:31:07,733 - INFO - Database tables create successfully
+2024-10-26 06:33:47,567 - INFO - Database tables create successfully
+2024-10-26 07:02:43,133 - INFO - Database tables create successfully
+2024-10-26 07:04:14,787 - INFO - Database tables create successfully
+2024-10-26 07:05:59,149 - INFO - Database tables create successfully
+2024-10-26 07:06:26,435 - INFO - Database tables create successfully
+2024-10-26 07:06:54,778 - INFO - Database tables create successfully
+2024-10-26 07:08:39,530 - INFO - Database tables create successfully
+2024-10-26 07:09:37,984 - INFO - Database tables create successfully
+2024-10-26 07:10:15,635 - INFO - Database tables create successfully
+2024-10-26 07:10:20,156 - INFO - manageStudentFunction - insert_student_all_data | data insert successfully
+2024-10-26 07:12:34,391 - INFO - |Mails - mail| -> email send to thushanmadhusanka3@gmail.com
+2024-10-26 07:13:38,226 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-26 07:14:50,783 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-26 07:16:59,461 - INFO - Database tables create successfully
+2024-10-26 07:17:02,959 - INFO - manageStudentFunction - get_student_data | successfully retrieve student data
+2024-10-26 07:17:02,964 - INFO - managementStudent - getStudentDetailsStudent | send data student_id 235424822752505
+2024-10-26 07:23:28,850 - INFO - Database tables create successfully
+2024-10-26 07:24:42,665 - INFO - manageTeacherFunction - create_new_teacher | teacher credentials {'teacher_firstname': 'ruwan', 'teacher_lastname': 'darshana', 'teacher_email': 'ruwan@gmail.com', 'teacher_mobile': 775651884, 'subject': 'combine maths', 'branch_id': 'SofzrblP', 'education_level_id': 'd6235d5a-ffe2-4299-8e53-1e5abebf2ee9', 'teacher_id': '7cbed3c2-cb9d-425a-bfe3-3284fdcc3df6', 'teacher_username': 'ruwan-u2qxb', 'teacher_password': '1e344354aec431505a9c28cf5e8e4d2be9aff084'}
+2024-10-26 07:26:56,464 - INFO - |Mails - mail| -> email send to ruwan@gmail.com
+2024-10-26 07:29:55,591 - INFO - manageTeacherFunction - updateTeacher | teacher credentials {'teacher_id': '7cbed3c2-cb9d-425a-bfe3-3284fdcc3df6', 'teacher_firstname': 'ruwan', 'teacher_lastname': 'darshana', 'teacher_email': 'ruwan@gmail.com', 'teacher_mobile': 775651884, 'subject': 'combine maths', 'branch_id': 'SofzrblP', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'teacher_address': {'lane1': 'road1', 'lane2': 'gampaha'}, 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'teacher_gender': True, 'teacher_NIC': '200236503381', 'teacher_school': 'bandaranayake colledge', 'teacher_description': 'combine maths is awsome'} urls ['https://example.com/sfdgsdf', 'https://example.com/argdzfgdf']
+2024-10-26 07:31:31,130 - INFO - manageTeacherFunction - teacher_credentials | retrieve teacher credentials 7cbed3c2-cb9d-425a-bfe3-3284fdcc3df6
+2024-10-26 07:32:07,185 - INFO - manageTeacherFunction - change_teacher_status | change to status 7cbed3c2-cb9d-425a-bfe3-3284fdcc3df6 

@@ -31,7 +31,7 @@ db_dependency = Annotated[Session, Depends(get_db)]
 # Generate username  format { kamal-5d4t }
 def generate_unique_username(first_name: str) -> str:
     # Generate a random string of 4 characters
-    random_string = ''.join(random.choices(string.ascii_lowercase + string.digits, k=4))
+    random_string = ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
     # Combine first name and random string
     username = f"{first_name.lower()}-{random_string}"
     return username
@@ -74,3 +74,8 @@ def get_sl_DateTime():
 def is_valid_email(email: str) -> bool:
     email_regx = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
     return re.match(email_regx,email) is not None
+
+def generate_unique_digit_number():
+    # Generate a random 15-digit number by limiting the range
+    number = random.randint(10**14, 10**15 - 1)
+    return number

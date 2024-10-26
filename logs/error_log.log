@@ -189,3 +189,542 @@ branch.0
 2024-10-12 15:46:10,288 - ERROR - manageTeacherFunction - teacher_credentials | error 'InstrumentedList' object has no attribute 'image_url'
 2024-10-12 17:14:11,684 - ERROR - manageStudentFunction - admin_get_students_details | error 'NoneType' object has no attribute 'branch_name'
 2024-10-12 17:18:17,018 - ERROR - manageStudentFunction - admin_get_students_details | error 'NoneType' object has no attribute 'branch_id'
+2024-10-20 20:17:24,654 - ERROR - manageStudentFunction - insert_educational_level | data insert fail For many-to-one relationship Branch.branch_manager, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "BranchManager" object to be referenced by only a single "Branch" object at a time via the Branch.branch_manager relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-20 20:17:24,655 - ERROR - educational_level_get_error manageStuFunc One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Branch(branch)]'. Original exception was: For many-to-one relationship Branch.branch_manager, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "BranchManager" object to be referenced by only a single "Branch" object at a time via the Branch.branch_manager relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-20 20:17:24,655 - ERROR - manageStudentFunction - insert_student_all_data | error One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Branch(branch)]'. Original exception was: For many-to-one relationship Branch.branch_manager, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "BranchManager" object to be referenced by only a single "Branch" object at a time via the Branch.branch_manager relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-20 20:20:21,047 - ERROR - manageStudentFunction - insert_educational_level | data insert fail For many-to-one relationship Branch.branch_manager, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "BranchManager" object to be referenced by only a single "Branch" object at a time via the Branch.branch_manager relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-20 20:20:21,047 - ERROR - educational_level_get_error manageStuFunc One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Branch(branch)]'. Original exception was: For many-to-one relationship Branch.branch_manager, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "BranchManager" object to be referenced by only a single "Branch" object at a time via the Branch.branch_manager relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-20 20:20:21,047 - ERROR - manageStudentFunction - insert_student_all_data | error One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Branch(branch)]'. Original exception was: For many-to-one relationship Branch.branch_manager, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "BranchManager" object to be referenced by only a single "Branch" object at a time via the Branch.branch_manager relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-20 20:21:55,886 - ERROR - manageStudentFunction - insert_educational_level | data insert fail For many-to-one relationship Branch.branch_manager, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "BranchManager" object to be referenced by only a single "Branch" object at a time via the Branch.branch_manager relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-20 20:21:55,887 - ERROR - educational_level_get_error manageStuFunc One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Branch(branch)]'. Original exception was: For many-to-one relationship Branch.branch_manager, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "BranchManager" object to be referenced by only a single "Branch" object at a time via the Branch.branch_manager relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-20 20:21:55,887 - ERROR - manageStudentFunction - insert_student_all_data | error One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Branch(branch)]'. Original exception was: For many-to-one relationship Branch.branch_manager, delete-orphan cascade is normally configured only on the "one" side of a one-to-many relationship, and not on the "many" side of a many-to-one or many-to-many relationship.  To force this relationship to allow a particular "BranchManager" object to be referenced by only a single "Branch" object at a time via the Branch.branch_manager relationship, which would allow delete-orphan cascade to take place in this direction, set the single_parent=True flag. (Background on this error at: https://sqlalche.me/e/20/bbf0)
+2024-10-20 20:27:49,949 - ERROR - manageStudentFunction - insert_educational_level | data insert fail Mapper 'Mapper[Teacher(teacher)]' has no property 'branch'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-10-20 20:27:49,949 - ERROR - educational_level_get_error manageStuFunc One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Branch(branch)]'. Original exception was: Mapper 'Mapper[Teacher(teacher)]' has no property 'branch'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-10-20 20:27:49,949 - ERROR - manageStudentFunction - insert_student_all_data | error One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Branch(branch)]'. Original exception was: Mapper 'Mapper[Teacher(teacher)]' has no property 'branch'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-10-20 20:28:57,420 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.IntegrityError) (1062, "Duplicate entry 'thushanmadhusanka3@gmail.com' for key 'ix_student_email'")
+[SQL: INSERT INTO student (student_id, firstname, lastname, email, address, gender, admission_free_is_paid, mother_tung, `NIC`, school, mobile, education_level_id, branch_id, created, active) VALUES (%(student_id)s, %(firstname)s, %(lastname)s, %(email)s, %(address)s, %(gender)s, %(admission_free_is_paid)s, %(mother_tung)s, %(NIC)s, %(school)s, %(mobile)s, %(education_level_id)s, %(branch_id)s, %(created)s, %(active)s)]
+[parameters: {'student_id': 'maQIF3eAJqbQmWx', 'firstname': 'thushan', 'lastname': 'madhu', 'email': 'thushanmadhusanka3@gmail.com', 'address': '{"line1": "udugampola", "line2": "udugampola", "city": "gampaha"}', 'gender': 1, 'admission_free_is_paid': 1, 'mother_tung': 'sinhala', 'NIC': '200126302287', 'school': 'senarath paranavithana collage', 'mobile': 784514776, 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'branch_id': 'wd1ef6r3', 'created': datetime.datetime(2024, 10, 20, 20, 28, 57, 408052, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>), 'active': 1}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-20 20:30:05,160 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.IntegrityError) (1062, "Duplicate entry 'thushanmadhusanka3@gmail.com' for key 'ix_student_email'")
+[SQL: INSERT INTO student (student_id, firstname, lastname, email, address, gender, admission_free_is_paid, mother_tung, `NIC`, school, mobile, education_level_id, branch_id, created, active) VALUES (%(student_id)s, %(firstname)s, %(lastname)s, %(email)s, %(address)s, %(gender)s, %(admission_free_is_paid)s, %(mother_tung)s, %(NIC)s, %(school)s, %(mobile)s, %(education_level_id)s, %(branch_id)s, %(created)s, %(active)s)]
+[parameters: {'student_id': 'LveTQw05tccvFyC', 'firstname': 'thushan', 'lastname': 'madhu', 'email': 'thushanmadhusanka3@gmail.com', 'address': '{"line1": "udugampola", "line2": "udugampola", "city": "gampaha"}', 'gender': 1, 'admission_free_is_paid': 1, 'mother_tung': 'sinhala', 'NIC': '200126302287', 'school': 'senarath paranavithana collage', 'mobile': 784514776, 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'branch_id': 'wd1ef6r3', 'created': datetime.datetime(2024, 10, 20, 20, 30, 5, 158558, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>), 'active': 1}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-20 20:31:30,572 - ERROR - manageOfficer - createOfficer | error 'OfficerSchema' object does not support item assignment
+2024-10-20 20:35:09,570 - ERROR - manageOfficer - createOfficer | error 'OfficerSchema' object does not support item assignment
+2024-10-20 20:37:28,168 - ERROR - manageOfficer - createOfficer | error 'OfficerSchema' object does not support item assignment
+2024-10-20 20:37:44,420 - ERROR - manageOfficer - createOfficer | error 'OfficerSchema' object does not support item assignment
+2024-10-20 20:40:57,217 - ERROR - manageOfficer - createOfficer | error 'OfficerSchema' object does not support item assignment
+2024-10-21 06:51:58,870 - ERROR - manageOfficerFunction - add_officer | error (pymysql.err.DataError) (1406, "Data too long for column 'password' at row 1")
+[SQL: INSERT INTO officer (officer_id, officer_username, officer_firstname, officer_lastname, password, officer_address, province, district, home_town, officer_email, officer_gender, officer_mobile, branch_id, `officer_NIC`, officer_school, education_level_id, created) VALUES (%(officer_id)s, %(officer_username)s, %(officer_firstname)s, %(officer_lastname)s, %(password)s, %(officer_address)s, %(province)s, %(district)s, %(home_town)s, %(officer_email)s, %(officer_gender)s, %(officer_mobile)s, %(branch_id)s, %(officer_NIC)s, %(officer_school)s, %(education_level_id)s, %(created)s)]
+[parameters: {'officer_id': 'oOTkt8ymCljwKXj', 'officer_username': 'ruwan-a8stf', 'officer_firstname': 'ruwan', 'officer_lastname': 'darshana', 'password': '17ba87110740bffbde84f03a3363a4f68844a552', 'officer_address': '{"lane1": "road1", "lane2": "gampaha"}', 'province': 'western', 'district': 'gampaha', 'home_town': 'gampaha', 'officer_email': 'thushanmadhusanka3@gmail.com', 'officer_gender': 1, 'officer_mobile': 775651884, 'branch_id': 'SofzrblP', 'officer_NIC': '200236503381', 'officer_school': 'bandaranayake colledge', 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'created': datetime.datetime(2024, 10, 21, 6, 51, 58, 868636, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2024-10-23 09:26:49,635 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0
+  Input should be a valid dictionary or instance of OfficerSchema [type=model_type, input_value=OfficerDetailsSchema(offi...43c5-a657-da8e64f164c0'), input_type=OfficerDetailsSchema]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+2024-10-23 09:34:05,525 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0.officer_address
+  JSON input should be string, bytes or bytearray [type=json_type, input_value={'lane1': 'road1', 'lane2': 'gampaha'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/json_type
+2024-10-23 09:34:30,306 - ERROR - manageOfficerFunction - retrieve_officer_details | error - Object of type OfficerDetailsSchema is not JSON serializable
+2024-10-23 09:36:31,456 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0.officer_address
+  JSON input should be string, bytes or bytearray [type=json_type, input_value={'lane1': 'road1', 'lane2': 'gampaha'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/json_type
+2024-10-23 09:40:34,935 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsSchema
+officer_address
+  JSON input should be string, bytes or bytearray [type=json_type, input_value={'lane1': 'road1', 'lane2': 'gampaha'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/json_type
+2024-10-23 09:42:01,652 - ERROR - manageOfficerFunction - retrieve_officer_details | error - the JSON object must be str, bytes or bytearray, not dict
+2024-10-23 09:42:12,699 - ERROR - manageOfficerFunction - retrieve_officer_details | error - the JSON object must be str, bytes or bytearray, not dict
+2024-10-23 09:44:03,209 - ERROR - manageOfficerFunction - retrieve_officer_details | error - the JSON object must be str, bytes or bytearray, not dict
+2024-10-23 09:44:22,852 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0
+  Input should be a valid dictionary or instance of OfficerSchema [type=model_type, input_value=OfficerDetailsSchema(offi...43c5-a657-da8e64f164c0'), input_type=OfficerDetailsSchema]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+2024-10-23 09:46:25,179 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0
+  Input should be a valid dictionary or instance of OfficerSchema [type=model_type, input_value=OfficerDetailsSchema(offi...43c5-a657-da8e64f164c0'), input_type=OfficerDetailsSchema]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+2024-10-23 09:49:50,139 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0
+  Input should be a valid dictionary or instance of OfficerSchema [type=model_type, input_value=OfficerDetailsSchema(offi...43c5-a657-da8e64f164c0'), input_type=OfficerDetailsSchema]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+2024-10-23 09:50:50,024 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0
+  Input should be a valid dictionary or instance of OfficerSchema [type=model_type, input_value=OfficerDetailsSchema(offi...43c5-a657-da8e64f164c0'), input_type=OfficerDetailsSchema]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+2024-10-23 09:51:20,251 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0
+  Input should be a valid dictionary or instance of OfficerSchema [type=model_type, input_value=OfficerDetailsSchema(offi...43c5-a657-da8e64f164c0'), input_type=OfficerDetailsSchema]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+2024-10-23 09:51:56,848 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0
+  Input should be a valid dictionary or instance of OfficerSchema [type=model_type, input_value=OfficerDetailsSchema(offi...43c5-a657-da8e64f164c0'), input_type=OfficerDetailsSchema]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+2024-10-23 09:52:20,933 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0.officer_address
+  JSON input should be string, bytes or bytearray [type=json_type, input_value={'lane1': 'road1', 'lane2': 'gampaha'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/json_type
+2024-10-23 09:53:15,319 - ERROR - manageOfficerFunction - retrieve_officer_details | error - 1 validation error for OfficerDetailsResponseSchema
+officer_data.0.officer_address
+  JSON input should be string, bytes or bytearray [type=json_type, input_value={'lane1': 'road1', 'lane2': 'gampaha'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/json_type
+2024-10-24 20:33:09,332 - ERROR - manageOfficerFunction - retrieve_officers | error - 'list' object has no attribute 'officer_id'
+2024-10-24 20:33:33,716 - ERROR - manageOfficerFunction - retrieve_officers | error - 'list' object has no attribute 'officer_id'
+2024-10-24 20:34:02,244 - ERROR - manageOfficerFunction - retrieve_officers | error - 'list' object has no attribute 'officer_id'
+2024-10-24 20:40:33,134 - ERROR - manageOfficerFunction - search_officers | error - 'NoneType' object has no attribute 'split'
+2024-10-25 20:46:52,314 - ERROR - educationLevel - addEducationLevel | error - Object of type UUID is not JSON serializable
+2024-10-25 20:50:59,245 - ERROR - educationLevel - addEducationLevel | error - Object of type UUID is not JSON serializable
+2024-10-25 20:51:09,008 - ERROR - educationLevel - addEducationLevel | error - Object of type UUID is not JSON serializable
+2024-10-25 21:04:40,991 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`kandy_LMS`.`student`, CONSTRAINT `fk_branch` FOREIGN KEY (`branch_id`) REFERENCES `branch` (`branch_id`))')
+[SQL: INSERT INTO student (student_id, firstname, lastname, email, address, gender, admission_free_is_paid, mother_tung, `NIC`, school, mobile, education_level_id, branch_id, created, active) VALUES (%(student_id)s, %(firstname)s, %(lastname)s, %(email)s, %(address)s, %(gender)s, %(admission_free_is_paid)s, %(mother_tung)s, %(NIC)s, %(school)s, %(mobile)s, %(education_level_id)s, %(branch_id)s, %(created)s, %(active)s)]
+[parameters: {'student_id': '6i0-5wn4w6Np16S', 'firstname': 'thush', 'lastname': 'madhu', 'email': 'thushanmadhuka3@gmail.com', 'address': '{"line1": "udugampola", "line2": "udugampola", "city": "gampaha"}', 'gender': 1, 'admission_free_is_paid': 1, 'mother_tung': 'sinhala', 'NIC': '200126302298', 'school': 'senarath paranavithana collage', 'mobile': 784514770, 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'branch_id': 'wd1ef6r3', 'created': datetime.datetime(2024, 10, 25, 21, 4, 40, 987323, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>), 'active': 1}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-26 06:11:30,356 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student_parents` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student_parents (
+	row_id INTEGER NOT NULL AUTO_INCREMENT, 
+	student_id VARCHAR(15), 
+	father_name VARCHAR(25), 
+	father_mobile INTEGER, 
+	father_email VARCHAR(40), 
+	father_occupation VARCHAR(15), 
+	father_address JSON, 
+	mother_name VARCHAR(25), 
+	mother_mobile INTEGER, 
+	mother_email VARCHAR(40), 
+	mother_occupation VARCHAR(15), 
+	mother_address JSON, 
+	info_send BOOL, 
+	PRIMARY KEY (row_id), 
+	FOREIGN KEY(student_id) REFERENCES student (student_id) ON DELETE CASCADE, 
+	UNIQUE (father_mobile), 
+	UNIQUE (father_email), 
+	UNIQUE (mother_mobile), 
+	UNIQUE (mother_email)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:14:37,411 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student_parents` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student_parents (
+	row_id INTEGER NOT NULL AUTO_INCREMENT, 
+	student_id VARCHAR(15), 
+	father_name VARCHAR(25), 
+	father_mobile INTEGER, 
+	father_email VARCHAR(40), 
+	father_occupation VARCHAR(15), 
+	father_address JSON, 
+	mother_name VARCHAR(25), 
+	mother_mobile INTEGER, 
+	mother_email VARCHAR(40), 
+	mother_occupation VARCHAR(15), 
+	mother_address JSON, 
+	info_send BOOL, 
+	PRIMARY KEY (row_id), 
+	FOREIGN KEY(student_id) REFERENCES student (student_id) ON DELETE CASCADE, 
+	UNIQUE (father_mobile), 
+	UNIQUE (father_email), 
+	UNIQUE (mother_mobile), 
+	UNIQUE (mother_email)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:15:23,712 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student_parents` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student_parents (
+	row_id INTEGER NOT NULL AUTO_INCREMENT, 
+	student_id VARCHAR(15), 
+	father_name VARCHAR(25), 
+	father_mobile INTEGER, 
+	father_email VARCHAR(40), 
+	father_occupation VARCHAR(15), 
+	father_address JSON, 
+	mother_name VARCHAR(25), 
+	mother_mobile INTEGER, 
+	mother_email VARCHAR(40), 
+	mother_occupation VARCHAR(15), 
+	mother_address JSON, 
+	info_send BOOL, 
+	PRIMARY KEY (row_id), 
+	FOREIGN KEY(student_id) REFERENCES student (student_id) ON DELETE CASCADE, 
+	UNIQUE (father_mobile), 
+	UNIQUE (father_email), 
+	UNIQUE (mother_mobile), 
+	UNIQUE (mother_email)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:17:22,911 - ERROR - Database tables create fail (pymysql.err.ProgrammingError) (1103, "Incorrect table name ''")
+[SQL: DESCRIBE `kandy_LMS`.``]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-10-26 06:17:41,388 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student_parents` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student_parents (
+	row_id INTEGER NOT NULL AUTO_INCREMENT, 
+	student_id VARCHAR(15), 
+	father_name VARCHAR(25), 
+	father_mobile INTEGER, 
+	father_email VARCHAR(40), 
+	father_occupation VARCHAR(15), 
+	father_address JSON, 
+	mother_name VARCHAR(25), 
+	mother_mobile INTEGER, 
+	mother_email VARCHAR(40), 
+	mother_occupation VARCHAR(15), 
+	mother_address JSON, 
+	info_send BOOL, 
+	PRIMARY KEY (row_id), 
+	FOREIGN KEY(student_id) REFERENCES student (student_id) ON DELETE CASCADE, 
+	UNIQUE (father_mobile), 
+	UNIQUE (father_email), 
+	UNIQUE (mother_mobile), 
+	UNIQUE (mother_email)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:26:26,025 - ERROR - manageStudent - addStudent | server error: 'int' object is not subscriptable
+2024-10-26 06:31:12,218 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.DataError) (1264, "Out of range value for column 'student_id' at row 1")
+[SQL: INSERT INTO certificate_images_student (student_id, certificate_image_url) VALUES (%(student_id__0)s, %(certificate_image_url__0)s), (%(student_id__1)s, %(certificate_image_url__1)s) RETURNING certificate_images_student.certificate_image_id, certificate_images_student.certificate_image_id AS certificate_image_id__1]
+[parameters: {'certificate_image_url__0': 'https://fastly.picsum.photos/id/235/200/200.jpg?hmac=YnNmt_uSm-7R-s3j5I_di0aCpJqnfzRzeAzZCV-SS4w', 'student_id__0': 636580801899364, 'certificate_image_url__1': 'http://image.oi/sdfasdfsdf.png', 'student_id__1': 636580801899364}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2024-10-26 06:38:11,305 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(20) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	password VARCHAR(80) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:43:44,977 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(20) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	password VARCHAR(80) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:43:55,386 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(20) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	password VARCHAR(80) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:44:45,979 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(20) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	password VARCHAR(80) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:46:21,398 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(20) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	password VARCHAR(80) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:47:10,683 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(20) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	password VARCHAR(80) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:51:11,040 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(20) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	password VARCHAR(80) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:51:17,338 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(20) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	password VARCHAR(80) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:54:16,426 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(15) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:54:21,049 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(15) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 06:57:25,150 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(15) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 07:00:04,445 - ERROR - Database tables create fail (pymysql.err.OperationalError) (1005, 'Can\'t create table `kandy_LMS`.`student` (errno: 150 "Foreign key constraint is incorrectly formed")')
+[SQL: 
+CREATE TABLE student (
+	student_id VARCHAR(15) NOT NULL, 
+	username VARCHAR(20) NOT NULL, 
+	firstname VARCHAR(15) NOT NULL, 
+	lastname VARCHAR(15) NOT NULL, 
+	email VARCHAR(40) NOT NULL, 
+	address JSON NOT NULL, 
+	gender BOOL NOT NULL, 
+	admission_free_is_paid BOOL NOT NULL, 
+	mother_tung VARCHAR(10), 
+	`NIC` VARCHAR(14), 
+	school VARCHAR(50), 
+	mobile INTEGER, 
+	education_level_id VARCHAR(36), 
+	branch_id VARCHAR(8), 
+	created DATETIME NOT NULL, 
+	active BOOL NOT NULL, 
+	PRIMARY KEY (student_id), 
+	FOREIGN KEY(education_level_id) REFERENCES education_level (education_level_id), 
+	FOREIGN KEY(branch_id) REFERENCES branch (branch_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 07:02:55,655 - ERROR - manageStudentFunction - insert_student_all_data | error 'password' is an invalid keyword argument for Student
+2024-10-26 07:07:03,062 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.OperationalError) (1364, "Field 'student_id' doesn't have a default value")
+[SQL: INSERT INTO student (username, password, firstname, lastname, email, address, gender, admission_free_is_paid, mother_tung, `NIC`, school, mobile, education_level_id, branch_id, created, active) VALUES (%(username)s, %(password)s, %(firstname)s, %(lastname)s, %(email)s, %(address)s, %(gender)s, %(admission_free_is_paid)s, %(mother_tung)s, %(NIC)s, %(school)s, %(mobile)s, %(education_level_id)s, %(branch_id)s, %(created)s, %(active)s)]
+[parameters: {'username': 'thush-p5ly5', 'password': '6e0a1785106fd3db251d469f9dbf5466c35a97b5', 'firstname': 'thush', 'lastname': 'madhu', 'email': 'thushanmadhusanka3@gmail.com', 'address': '{"line1": "udugampola", "line2": "udugampola", "city": "gampaha"}', 'gender': 1, 'admission_free_is_paid': 1, 'mother_tung': 'sinhala', 'NIC': '200126302298', 'school': 'senarath paranavithana collage', 'mobile': 784514770, 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'branch_id': 'sofzrblp', 'created': None, 'active': None}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-10-26 07:08:54,565 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.IntegrityError) (1048, "Column 'created' cannot be null")
+[SQL: INSERT INTO student (student_id, username, password, firstname, lastname, email, address, gender, admission_free_is_paid, mother_tung, `NIC`, school, mobile, education_level_id, branch_id, created, active) VALUES (%(student_id)s, %(username)s, %(password)s, %(firstname)s, %(lastname)s, %(email)s, %(address)s, %(gender)s, %(admission_free_is_paid)s, %(mother_tung)s, %(NIC)s, %(school)s, %(mobile)s, %(education_level_id)s, %(branch_id)s, %(created)s, %(active)s)]
+[parameters: {'student_id': '246571382992927', 'username': 'thush-pmmj3', 'password': '6a4dd7377ea43ba27224358ed5f86d0c305ff04e', 'firstname': 'thush', 'lastname': 'madhu', 'email': 'thushanmadhusanka3@gmail.com', 'address': '{"line1": "udugampola", "line2": "udugampola", "city": "gampaha"}', 'gender': 1, 'admission_free_is_paid': 1, 'mother_tung': 'sinhala', 'NIC': '200126302298', 'school': 'senarath paranavithana collage', 'mobile': 784514770, 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'branch_id': 'sofzrblp', 'created': None, 'active': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-26 07:09:40,076 - ERROR - manageStudentFunction - insert_student_all_data | error (pymysql.err.IntegrityError) (1048, "Column 'active' cannot be null")
+[SQL: INSERT INTO student (student_id, username, password, firstname, lastname, email, address, gender, admission_free_is_paid, mother_tung, `NIC`, school, mobile, education_level_id, branch_id, created, active) VALUES (%(student_id)s, %(username)s, %(password)s, %(firstname)s, %(lastname)s, %(email)s, %(address)s, %(gender)s, %(admission_free_is_paid)s, %(mother_tung)s, %(NIC)s, %(school)s, %(mobile)s, %(education_level_id)s, %(branch_id)s, %(created)s, %(active)s)]
+[parameters: {'student_id': '102560594201429', 'username': 'thush-1t41y', 'password': '8333e7bc1d4269e78a4e9133788eea22902ca581', 'firstname': 'thush', 'lastname': 'madhu', 'email': 'thushanmadhusanka3@gmail.com', 'address': '{"line1": "udugampola", "line2": "udugampola", "city": "gampaha"}', 'gender': 1, 'admission_free_is_paid': 1, 'mother_tung': 'sinhala', 'NIC': '200126302298', 'school': 'senarath paranavithana collage', 'mobile': 784514770, 'education_level_id': '3a90276a-cba1-43c5-a657-da8e64f164c0', 'branch_id': 'sofzrblp', 'created': datetime.datetime(2024, 10, 26, 7, 9, 40, 75142, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>), 'active': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-10-26 07:13:38,227 - ERROR - manageStudentFunction - get_student_data | error 1 validation error for StudentSchema
+education_level_id
+  Field required [type=missing, input_value={'student_id': '235424822...'branch_id': 'sofzrblp'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2024-10-26 07:14:50,783 - ERROR - manageStudentFunction - get_student_data | error 1 validation error for StudentSchema
+education_level_id
+  Field required [type=missing, input_value={'student_id': '235424822...'branch_id': 'sofzrblp'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2024-10-26 07:20:30,857 - ERROR - manageTeacherFunction - create_new_teacher | error (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`kandy_LMS`.`teacher`, CONSTRAINT `teacher_ibfk_2` FOREIGN KEY (`education_level_id`) REFERENCES `education_level` (`education_level_id`))')
+[SQL: INSERT INTO teacher (teacher_id, teacher_username, teacher_password, teacher_firstname, teacher_lastname, teacher_email, teacher_mobile, subject, branch_id, education_level_id, password, province, district, home_town, teacher_gender, `teacher_NIC`, teacher_school, teacher_description, teacher_active, created) VALUES (%(teacher_id)s, %(teacher_username)s, %(teacher_password)s, %(teacher_firstname)s, %(teacher_lastname)s, %(teacher_email)s, %(teacher_mobile)s, %(subject)s, %(branch_id)s, %(education_level_id)s, %(password)s, %(province)s, %(district)s, %(home_town)s, %(teacher_gender)s, %(teacher_NIC)s, %(teacher_school)s, %(teacher_description)s, %(teacher_active)s, %(created)s)]
+[parameters: {'teacher_id': UUID('0999fab8-409c-44b8-89a6-de2bdae9107a'), 'teacher_username': 'ruwan-71fit', 'teacher_password': '9f225bfa5095be40d51744d6f0f85fbf1c95699a', 'teacher_firstname': 'ruwan', 'teacher_lastname': 'darshana', 'teacher_email': 'ruwan@gmail.com', 'teacher_mobile': 775651884, 'subject': 'combine maths', 'branch_id': 'SofzrblP', 'education_level_id': 'grade 10', 'password': None, 'province': None, 'district': None, 'home_town': None, 'teacher_gender': None, 'teacher_NIC': None, 'teacher_school': None, 'teacher_description': None, 'teacher_active': 1, 'created': datetime.datetime(2024, 10, 26, 7, 20, 30, 839915, tzinfo=<DstTzInfo 'Asia/Colombo' +0530+5:30:00 STD>)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)

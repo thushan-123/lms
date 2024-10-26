@@ -1,0 +1,65 @@
+version: '3.1'
+
+services:
+
+  fastapi_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kandy_project
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mariadb
+    environment:
+      - MARIADB_URL=mysql+pymysql://thush:thush@localhost:3306/kandy_LMS
+      - ADMIN_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYT687gu8*hjihuk9JQgFDJrp4Fdbk0o
+      - MANAGER_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYT687gu8*hjihuk9JQgFDJrp4Fdfgs|?sdfg
+      - ACADEMIC_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYTsdsihuk9JQgFDJrp4Fserh
+      - TEACHER_SECRET_KEY=SjhOIhpo9OHHUOuipIutfsdfasd4seg56u$%&bbHJGHYT687gu8*hjihuk9JQgFDJrp4Fdbasdf
+      - STUDENT_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYT687gwefjihuk9JQgFDJrp4fdsfsef
+      - ALGORITHM=HS256
+      - COMPANY_EMAIL = thushanmadusanka456@gmail.com
+      - COMPANY_EMAIL_PASSWORD = tlvi vivt kihc bkst
+      - TZ=Asia/Colombo
+
+    volumes:
+      - .:/app
+    restart: always
+
+  mariadb:
+    image: mariadb:latest
+    container_name: edexme_mariadb_DB
+    environment:
+      MYSQL_ROOT_PASSWORD: SHzeQizz
+      MYSQL_DATABASE: kandy_LMS
+      MYSQL_USER: user
+      MYSQL_PASSWORD: SHzeQizz
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./db-init:/docker-entrypoint-initdb.d
+    restart: always
+
+  caddy:
+    image: caddy:latest
+    container_name: caddy_web_server
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./website:/var/www/website
+    restart: always
+    depends_on:
+      - fastapi_app
+
+
+
+volumes:
+  mariadb_data:
+  caddy_data:
+  caddy_config:

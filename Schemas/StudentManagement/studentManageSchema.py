@@ -4,7 +4,7 @@ from nanoid import generate
 from pydantic import BaseModel, EmailStr, Json, constr, field_validator, Field
 
 class StudentSchema(BaseModel):
-    student_id: str = Field(default_factory= lambda : generate(size=15)) # auto gen student id
+    #student_id: str = Field(default_factory= lambda : generate(size=15)) # auto gen student id
     firstname: constr(max_length=15, to_lower=True)
     lastname: constr(max_length=15, to_lower=True)
     email: EmailStr
@@ -15,7 +15,7 @@ class StudentSchema(BaseModel):
     NIC: Optional[str] = None
     school: Optional[constr(max_length=50)] = None
     mobile: int
-    education_level_name: constr(max_length=15, to_lower=True)
+    education_level_id: constr(max_length=36)
     branch_id: constr(max_length=8, to_lower=True)
 
 

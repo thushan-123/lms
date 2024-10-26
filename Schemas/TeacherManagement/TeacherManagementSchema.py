@@ -4,7 +4,6 @@ from datetime import datetime
 import uuid
 
 class TeacherCreateSchema(BaseModel):
-    teacher_id:str = uuid.uuid4()
     teacher_firstname: constr(max_length=15)
     teacher_lastname: constr(max_length=15)
     teacher_email: EmailStr

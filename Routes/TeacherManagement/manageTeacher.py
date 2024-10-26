@@ -2,10 +2,14 @@ from fastapi import APIRouter, Depends, status
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from Authorization.auth import decode_token_access_role, oauth2_scheme
-from Function.function import db_dependency
+from Function.function import db_dependency, generate_unique_username
 from Loggers.log import err_log
 from Schemas.TeacherManagement.TeacherManagementSchema import TeacherCreateSchema, TeacherUpdateSchema, TeacherStatusSchema
 from .manageTeacherFunction import create_teacher, update_teacher, teacher_credentials, change_teacher_status
+from Mail.mail import Mail
+from Mail.html import html_content_username_password
+from nanoid import generate
+import uuid
 
 router = APIRouter()
 
@@ -14,8 +18,17 @@ async def create_new_teacher(request: TeacherCreateSchema, db: db_dependency,tok
     try:
         payload = await decode_token_access_role(token.credentials,['admin','academic','manager'])
         if payload:
-            result = await create_teacher(db, dict(request))
+            teacher_data = dict(request)
+            teacher_username = generate_unique_username(request.teacher_firstname)
+            teacher_email = request.teacher_email
+            teacher_password = generate(size=8)
+            teacher_data["teacher_id"] = str(uuid.uuid4())
+            teacher_data["teacher_username"] = teacher_username
+            teacher_data["teacher_password"] = teacher_password
+            result = await create_teacher(db, teacher_data)
             if result:
+                mail_ = Mail(teacher_email,"Username and Password",html_content_username_password(teacher_username,teacher_password))
+                mail_.send()
                 return JSONResponse(status_code=status.HTTP_200_OK, content={"status": True, "detail": "teacher is created successfully"})
             else:
                 return JSONResponse(status_code=status.HTTP_400_BAD_REQUEST, content={"status": False, "detail": "failed to insert branch data. Possible duplicate entry"})

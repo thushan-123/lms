@@ -1,0 +1,7 @@
+http://testninja.info {
+    redir https://testninja.info{uri}
+}
+
+https://testninja.info {
+    reverse_proxy fastapi_app:8000
+}

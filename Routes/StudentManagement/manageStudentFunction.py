@@ -6,11 +6,14 @@ from Loggers.log import app_log, err_log
 from Schemas.StudentManagement.studentManageSchema import AddStudent, StudentParentsSchema, StudentSchema, StudentSiblingsSchema \
     , ProfileImageStudentSchema, CertificateImagesStudentSchema
 import json
+from Function.function import password_hash
 
 async def insert_student_all_data(db:Session, student_id: str
                                   ,student:dict, parents: dict,
                                   siblings:list, prof_image_url: str, certificate_urls: list):
     try:
+        hash_password = password_hash(student["password"])
+        student["password"] = hash_password
         db.add(Student(**student))
         db.flush()
         db.add(StudentParents(student_id=student_id, **parents))
@@ -24,47 +27,6 @@ async def insert_student_all_data(db:Session, student_id: str
         err_log.error(f"manageStudentFunction - insert_student_all_data | error {e}")
         return False
 
-async def insert_education_level(db: Session, level_name: str) -> bool:
-    try:
-        # check education_level_name in the table | level_name is exits not insert data
-        check = db.query(EducationLevel).filter(EducationLevel.education_level_name == level_name).first()
-        if check is None:
-            query = EducationLevel(education_level_name=level_name)
-            db.add(query)
-            db.commit()
-            db.refresh(query)
-            app_log.info("manageStudentFunction - insert_education_level | data insert successfully")
-            return True
-        else:
-            return True
-    except Exception as e:
-        db.rollback()
-        err_log.error(f"manageStudentFunction - insert_educational_level | data insert fail {e}")
-        return False
-
-async def get_education_level_id(db:Session, level_name:str):
-    try:
-        data = db.query(EducationLevel).filter(EducationLevel.education_level_name == level_name).first()
-        return data.education_level_id
-    except Exception as e:
-        err_log.error(f"educational_level_get_error manageStuFunc {e}")
-        return None
-
-async def get_educational_level(db: Session):
-    try:
-        data_set = db.query(EducationLevel).all()
-        app_log.info("manageStudentFunction - insert_get_educational_level | data retrieve successfully")
-        if data_set is not None:
-            payload = set()
-            for data in data_set:
-                payload.add(data.education_level_name)
-            return payload
-        else:
-            return None
-    except Exception as e:
-        db.rollback()
-        err_log.error(f"manageStudentFunction - insert_get_educational_level | data retrieve fail {e}")
-        return None
 
 async def deactivate_students_field(db: Session, student_id: list) -> bool:
     try:
@@ -99,7 +61,6 @@ async def get_student_data(db: Session, student_id: str):
             joinedload(Student.student_certificate_images)
         ).filter(Student.student_id == student_id).first()
 
-        education_level = db.query(EducationLevel).filter(EducationLevel.education_level_id == data.education_level_id).first()
 
         app_log.info("manageStudentFunction - get_student_data | successfully retrieve student data")
 
@@ -118,7 +79,7 @@ async def get_student_data(db: Session, student_id: str):
             NIC = data.NIC,
             school = data.school,
             mobile = data.mobile,
-            education_level_name = education_level.education_level_name,
+            education_level_id = data.education_level_id,
             branch_id = data.branch_id
         )
         parents = StudentParentsSchema(
@@ -175,7 +136,7 @@ async def admin_get_students_details(db: Session) -> list:
             "student_id": data.student_id,
             "firstname": data.firstname,
             "lastname": data.lastname,
-            "branch_name" : data.branch_id,
+            "branch_id" : data.branch_id,
             "active": data.active
         } for data in data_list]
         return data_list_dict
@@ -214,7 +175,7 @@ async def search_students(db: Session, role:str, user_id: str = None,branch_name
             "student_id": data.student_id,
             "firstname": data.firstname,
             "lastname": data.lastname,
-            "branch_name": data.branch.branch_name,
+            "branch_id": data.branch_id,
             "active": data.active
         } for data in data_list]
         return data_list_dict
