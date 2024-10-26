@@ -12,7 +12,7 @@ services:
     depends_on:
       - mariadb
     environment:
-      - MARIADB_URL=mysql+pymysql://thush:thush@mariadb:3306/kandy_LMS
+      - MARIADB_URL=mysql+pymysql://root:thush@mariadb:3306/kandy_LMS
       - ADMIN_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYT687gu8*hjihuk9JQgFDJrp4Fdbk0o
       - MANAGER_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYT687gu8*hjihuk9JQgFDJrp4Fdfgs|?sdfg
       - ACADEMIC_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYTsdsihuk9JQgFDJrp4Fserh
