@@ -29,7 +29,7 @@ services:
 
   mariadb:
     image: mariadb:latest
-    container_name: edexme_mariadb_DB
+    container_name: kandy_mariadb_DB
     environment:
       MYSQL_ROOT_PASSWORD: thush
       MYSQL_DATABASE: kandy_LMS
