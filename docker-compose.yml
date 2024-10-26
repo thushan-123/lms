@@ -16,7 +16,7 @@ services:
       - ADMIN_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYT687gu8*hjihuk9JQgFDJrp4Fdbk0o
       - MANAGER_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYT687gu8*hjihuk9JQgFDJrp4Fdfgs|?sdfg
       - ACADEMIC_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYTsdsihuk9JQgFDJrp4Fserh
-      - TEACHER_SECRET_KEY=SjhOIhpo9OHHUOuipIutfsdfasd4seg56u$%&bbHJGHYT687gu8*hjihuk9JQgFDJrp4Fdbasdf
+      - TEACHER_SECRET_KEY=SjhOIhpo9OHHUOuipIutfsdfasd4seg56u&bbHJGHYT687gu8*hjihuk9JQgFDJrp4Fdbasdf
       - STUDENT_SECRET_KEY=SjhOIhpo9OHHUOuipIutftf&d\cAJ0bbHJGHYT687gwefjihuk9JQgFDJrp4fdsfsef
       - ALGORITHM=HS256
       - COMPANY_EMAIL = thushanmadusanka456@gmail.com
@@ -52,7 +52,6 @@ services:
       - caddy_data:/data
       - caddy_config:/config
       - ./Caddyfile:/etc/caddy/Caddyfile
-      - ./website:/var/www/website
     restart: always
     depends_on:
       - fastapi_app
