@@ -51,7 +51,7 @@ class BranchUpdateSchema(BaseModel):
     open_time: time
     close_time: time
     description: Optional[str] = None
-    branch_manager_id : str
+
 
 
 

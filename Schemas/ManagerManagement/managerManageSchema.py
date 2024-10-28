@@ -3,6 +3,7 @@ from pydantic import BaseModel, constr, EmailStr, field_validator
 class CreateManagerSchema(BaseModel):
     manager_name: constr(max_length=30)
     manager_email: EmailStr
+    branch_id: constr(max_length=8)
 
     @classmethod
     @field_validator("manager_email")

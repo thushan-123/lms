@@ -3,9 +3,9 @@ from Loggers.log import err_log, app_log
 from Databases.models import BranchManager
 from sqlalchemy import delete, update
 
-async def create_manager(db: Session, manager_name: str, manager_email: str) -> bool:
+async def create_manager(db: Session, manager_name: str, manager_email: str, branch_id: str) -> bool:
     try:
-        db.add(BranchManager(manager_name=manager_name,manager_email=manager_email))
+        db.add(BranchManager(manager_name=manager_name,manager_email=manager_email,branch_id=branch_id))
         db.commit()
         db.flush()
         app_log.info(f"manageManagerFunction - create_manager | create manager {manager_name,manager_email}")

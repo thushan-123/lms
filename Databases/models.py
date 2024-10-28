@@ -29,9 +29,10 @@ class BranchManager(Base):
     manager_id = Column(String(10), nullable=False, index=True, primary_key=True, default= lambda : generate(size=10))
     manager_name = Column(String(30), index=True, nullable=False, unique=True)
     manager_email = Column(String(40), nullable=False, index=True, unique=True)
+    branch_id = Column(String(8),ForeignKey("branch.branch_id"))
 
     # relationship -> branch
-    branch = relationship("Branch", back_populates="branch_manager", cascade="all, delete-orphan", lazy="joined")
+    branch = relationship("Branch", back_populates="branch_manager", lazy="joined")
 
 
 class Branch(Base):
@@ -47,7 +48,7 @@ class Branch(Base):
     close_time = Column(Time, nullable=False)
     description = Column(Text)
     active = Column(Boolean, nullable=False, default=True)
-    branch_manager_id = Column(String(10), ForeignKey("branch_manager.manager_id"))
+    #branch_manager_id = Column(String(10), ForeignKey("branch_manager.manager_id"))
     created = Column(DateTime, nullable=False, default= lambda : get_sl_DateTime())
 
 
@@ -58,7 +59,7 @@ class Branch(Base):
     # relationship -> BranchImages
     branch_images = relationship("BranchImages", back_populates="branch", cascade="all, delete-orphan", lazy="joined")
     # relationship ->branch_manager
-    branch_manager = relationship("BranchManager", lazy="joined")
+    branch_manager = relationship("BranchManager",back_populates="branch", cascade="all, delete-orphan", lazy="joined")
     # relationship -> Teacher
     teacher = relationship("Teacher", back_populates="branch", cascade="all, delete-orphan", lazy="joined")
     #relationship -> Officer

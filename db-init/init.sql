@@ -1,7 +1,4 @@
-CREATE DATABASE IF NOT EXISTS kandy_LMS;
-USE kandy_LMS;
-
-/*M!999999\- enable the sandbox mode */
+/*M!999999\- enable the sandbox mode */ 
 -- MariaDB dump 10.19-11.4.3-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: kandy_LMS
@@ -67,15 +64,12 @@ CREATE TABLE `branch` (
   `close_time` time NOT NULL,
   `description` text DEFAULT NULL,
   `active` tinyint(1) NOT NULL,
-  `branch_manager_id` varchar(10) DEFAULT NULL,
   `created` datetime NOT NULL,
   PRIMARY KEY (`branch_id`),
   UNIQUE KEY `ix_branch_email` (`email`),
   UNIQUE KEY `ix_branch_branch_name` (`branch_name`),
-  KEY `branch_manager_id` (`branch_manager_id`),
   KEY `ix_branch_mobile` (`mobile`),
-  KEY `ix_branch_branch_id` (`branch_id`),
-  CONSTRAINT `branch_ibfk_1` FOREIGN KEY (`branch_manager_id`) REFERENCES `branch_manager` (`manager_id`)
+  KEY `ix_branch_branch_id` (`branch_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -86,7 +80,7 @@ CREATE TABLE `branch` (
 LOCK TABLES `branch` WRITE;
 /*!40000 ALTER TABLE `branch` DISABLE KEYS */;
 INSERT INTO `branch` VALUES
-('SofzrblP','mainbranch','{\"line 1\": \"123 Main St\", \"line2\": \"Springfield\"}','mainbranch@example.com','gampha',1234567890,'09:00:00','17:00:00','Main branch of the company',1,'RX_gINRzdY','2024-10-08 08:03:31');
+('SofzrblP','mainbranch','{\"line 1\": \"123 Main St\", \"line2\": \"Springfield\"}','mainbranch@example.com','gampha',1234567890,'09:00:00','17:00:30','Main branch of the company',1,'2024-10-08 08:03:31');
 /*!40000 ALTER TABLE `branch` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,7 +99,7 @@ CREATE TABLE `branch_halls` (
   KEY `ix_branch_halls_branch_id` (`branch_id`),
   KEY `ix_branch_halls_hall_name` (`hall_name`),
   CONSTRAINT `branch_halls_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branch` (`branch_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,8 +109,9 @@ CREATE TABLE `branch_halls` (
 LOCK TABLES `branch_halls` WRITE;
 /*!40000 ALTER TABLE `branch_halls` DISABLE KEYS */;
 INSERT INTO `branch_halls` VALUES
-(1,'Hall A','SofzrblP'),
-(2,'Hall B','SofzrblP');
+(6,'Hall A','SofzrblP'),
+(7,'Hall V','SofzrblP'),
+(8,'Hall C','SofzrblP');
 /*!40000 ALTER TABLE `branch_halls` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -134,7 +129,7 @@ CREATE TABLE `branch_images` (
   PRIMARY KEY (`image_id`),
   KEY `ix_branch_images_branch_id` (`branch_id`),
   CONSTRAINT `branch_images_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branch` (`branch_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,8 +139,8 @@ CREATE TABLE `branch_images` (
 LOCK TABLES `branch_images` WRITE;
 /*!40000 ALTER TABLE `branch_images` DISABLE KEYS */;
 INSERT INTO `branch_images` VALUES
-(1,'https://example.com/image1.jpg','SofzrblP'),
-(2,'https://example.com/image2.jpg','SofzrblP');
+(3,'https://example.com/image12.jpg','SofzrblP'),
+(4,'https://example.com/image22.jpg','SofzrblP');
 /*!40000 ALTER TABLE `branch_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,10 +155,13 @@ CREATE TABLE `branch_manager` (
   `manager_id` varchar(10) NOT NULL,
   `manager_name` varchar(30) NOT NULL,
   `manager_email` varchar(40) NOT NULL,
+  `branch_id` varchar(8) NOT NULL,
   PRIMARY KEY (`manager_id`),
   UNIQUE KEY `ix_branch_manager_manager_email` (`manager_email`),
   UNIQUE KEY `ix_branch_manager_manager_name` (`manager_name`),
-  KEY `ix_branch_manager_manager_id` (`manager_id`)
+  KEY `ix_branch_manager_manager_id` (`manager_id`),
+  KEY `branch_id` (`branch_id`),
+  CONSTRAINT `branch_manager_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branch` (`branch_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -174,8 +172,7 @@ CREATE TABLE `branch_manager` (
 LOCK TABLES `branch_manager` WRITE;
 /*!40000 ALTER TABLE `branch_manager` DISABLE KEYS */;
 INSERT INTO `branch_manager` VALUES
-('0EQODC8tKy','kamal','kamal@gmail.com'),
-('RX_gINRzdY','nimal','nimal@gmail.com');
+('vW5fr-my1W','nimal','nimal@gmail.com','SofzrblP');
 /*!40000 ALTER TABLE `branch_manager` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -707,4 +704,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2024-10-26  9:00:40
+-- Dump completed on 2024-10-28 19:41:25

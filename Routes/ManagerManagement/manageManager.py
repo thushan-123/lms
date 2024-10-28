@@ -13,7 +13,7 @@ async def creating_manager(request: CreateManagerSchema, db: db_dependency, toke
     try:
         payload = await decode_token_access_role(token.credentials,['admin'])
         if payload:
-            result = await create_manager(db, request.manager_name, request.manager_email)
+            result = await create_manager(db, request.manager_name, request.manager_email,request.branch_id)
             if result:
                 return JSONResponse(status_code=status.HTTP_201_CREATED, content={"status": True, "detail": "create successfully"})
             else:

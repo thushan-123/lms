@@ -40,7 +40,7 @@ async def admin_login(request: LoginAdmin, db: db_dependency):
             else:
                 return JSONResponse(status_code=400, content={"status": False, "detail": "process-error"})
         else:
-            return JSONResponse(status_code=400, content={"status": False, "detail": "invalid username or password"})
+            return JSONResponse(status_code=403, content={"status": False, "detail": "invalid username or password"})
     except Exception as e:
         err_log.error(f"adminLogin - server error: {e}")
         return JSONResponse(status_code=500, content={"status": False, "detail": "internal server error"})

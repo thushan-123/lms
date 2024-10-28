@@ -93,7 +93,7 @@ async def retrieve_branch(db: Session, branch_id: str):
             open_time=data.open_time,
             close_time=data.close_time,
             description=data.description,
-            branch_manager_id=data.branch_manager_id
+
         )
 
         branch_halls = [hall.hall_name for hall in data.branch_halls]
@@ -119,8 +119,6 @@ async def retrieve_branches(db: Session):
         data_list = [{
             "branch_id": data.branch_id,
             "branch_name": data.branch_name,
-            "manager_id": data.branch_manager.manager_id,
-            "branch_manager": data.branch_manager.manager_name,
             "mobile": data.mobile,
             "email": data.email,
             "open_time": data.open_time

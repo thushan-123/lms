@@ -11,6 +11,9 @@ from Routes.TeacherManagement import manageTeacher
 from Routes.OfficerManagement import manageOfficer
 from Routes.ClassManagement import manageClass
 from Routes.EducationLevels import educationLevel
+from Routes.UsersAuthentication.Student import student_signin
+from Routes.UsersAuthentication.Teacher import teacher
+from Routes.UsersAuthentication.Officer import officer
 
 
 app = FastAPI()
@@ -34,6 +37,9 @@ app.add_middleware(
 
 
 app.include_router(admin.router, prefix="/api/v1/auth/admin")
+app.include_router(student_signin.router, prefix="/api/v1/auth/student")
+app.include_router(officer.router, prefix="/api/v1/auth/officer")
+app.include_router(teacher.router, prefix="/api/v1/auth/teacher")
 app.include_router(manageStudent.router, prefix="/api/v1/manageStudent")
 app.include_router(manageBranch.router, prefix="/api/v1/manageBranch")
 app.include_router(manageManager.router, prefix="/api/v1/manageManager")
